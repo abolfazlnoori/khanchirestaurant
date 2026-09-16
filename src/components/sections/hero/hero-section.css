@@ -1,0 +1,36 @@
+.hero-pattern::before,
+.hero-pattern::after {
+  position: absolute;
+  z-index: 0;
+  width: 480px;
+  height: 680px;
+  background: url("/assets/patterns/girih-grid.png") center / contain;
+  content: "";
+  opacity: 0.52;
+  pointer-events: none;
+}
+
+.hero-pattern::before {
+  top: -55px;
+  left: -70px;
+}
+
+.hero-pattern::after {
+  top: -65px;
+  right: -110px;
+  height: 340px;
+}
+
+@media (max-width: 900px) {
+  .hero-pattern::before {
+    top: 72px;
+    left: -180px;
+    width: 290px;
+    height: 290px;
+    opacity: 0.68;
+  }
+
+  .hero-pattern::after {
+    display: none;
+  }
+}

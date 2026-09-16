@@ -1,9 +1,13 @@
 @import "tailwindcss";
+@import "../components/sections/hero/hero-section.css";
+@import "../components/sections/menu/menu-section.css";
+@import "../components/sections/story/story-section.css";
+@import "../components/sections/gallery/gallery-section.css";
 
 :root {
-  --ink: #0b2a1c;
+  --ink: #002b17;
   --forest: #002b17;
-  --forest-deep: #001f10;
+  --forest-deep: #001904;
   --gold: #a97228;
   --gold-soft: #c6a46f;
   --paper: #fafafa;
@@ -33,7 +37,12 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
   background: var(--paper);
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -51,153 +60,6 @@ a:focus-visible,
 summary:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
-}
-
-.hero-pattern::before,
-.hero-pattern::after {
-  position: absolute;
-  z-index: 0;
-  width: 480px;
-  height: 680px;
-  background: url("/assets/patterns/girih-grid.png") center / contain;
-  content: "";
-  opacity: 0.52;
-  pointer-events: none;
-}
-
-.hero-pattern::before {
-  top: -55px;
-  left: -70px;
-}
-
-.hero-pattern::after {
-  top: -65px;
-  right: -110px;
-  height: 340px;
-}
-
-.video-placeholder {
-  position: relative;
-  background:
-    radial-gradient(circle at 22% 60%, rgb(141 166 45 / 48%), transparent 36%),
-    linear-gradient(115deg, #004322 0%, #0d2c1d 56%, #03170c 100%);
-}
-
-.video-placeholder::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgb(186 204 60 / 15%), transparent 42%, rgb(0 0 0 / 16%));
-  content: "";
-}
-
-.video-placeholder__frame {
-  position: absolute;
-  z-index: 1;
-  inset: 22px;
-  border: 1px solid rgb(255 255 255 / 34%);
-}
-
-.video-placeholder__play {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  width: 96px;
-  height: 96px;
-  translate: -50% -50%;
-  border: 1px solid rgb(255 255 255 / 62%);
-  border-radius: 999px;
-  background: rgb(8 24 16 / 36%);
-}
-
-.video-placeholder__play::after {
-  position: absolute;
-  top: 50%;
-  left: 53%;
-  width: 0;
-  height: 0;
-  translate: -50% -50%;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
-  border-left: 14px solid white;
-  content: "";
-}
-
-.gallery-pattern::after {
-  position: absolute;
-  bottom: -100px;
-  left: -70px;
-  width: 520px;
-  height: 520px;
-  background: url("/assets/patterns/girih-grid.png") center / contain no-repeat;
-  content: "";
-  opacity: 0.46;
-  pointer-events: none;
-}
-
-.mosaic {
-  grid-template-areas:
-    "copy-two image-three copy-one"
-    "image-two copy-three image-one";
-}
-
-.mosaic-copy--one { grid-area: copy-one; }
-.mosaic-image--one { grid-area: image-one; }
-.mosaic-copy--two { grid-area: copy-two; }
-.mosaic-image--two { grid-area: image-two; }
-.mosaic-copy--three { grid-area: copy-three; }
-.mosaic-image--three { grid-area: image-three; }
-
-@media (max-width: 900px) {
-  .hero-pattern::before {
-    top: 72px;
-    left: -180px;
-    width: 290px;
-    height: 290px;
-    opacity: 0.68;
-  }
-
-  .hero-pattern::after {
-    display: none;
-  }
-
-  .menu-grid {
-    grid-template-areas:
-      "featured regular-one"
-      "featured regular-two";
-  }
-
-  .menu-card:nth-child(1) { grid-area: regular-two; }
-  .menu-card:nth-child(2) { grid-area: featured; }
-  .menu-card:nth-child(3) { grid-area: regular-one; }
-
-  .video-placeholder__frame {
-    inset: 12px;
-  }
-
-  .video-placeholder__play {
-    width: 56px;
-    height: 56px;
-  }
-
-  .video-placeholder__play::after {
-    border-top-width: 6px;
-    border-bottom-width: 6px;
-    border-left-width: 10px;
-  }
-
-  .gallery-pattern::after {
-    bottom: -50px;
-    left: -170px;
-    width: 290px;
-    height: 290px;
-  }
-
-  .mosaic {
-    grid-template-areas:
-      "copy-two image-two copy-one"
-      "image-three copy-three image-one";
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

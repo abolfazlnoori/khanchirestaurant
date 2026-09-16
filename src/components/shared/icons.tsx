@@ -25,3 +25,13 @@ export function StarIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function UserIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="9.25" fill="none" stroke="currentColor" strokeWidth="1.2" />
+      <circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.2" />
+      <path d="M7.8 17.3c.45-2.3 2.05-3.7 4.2-3.7s3.75 1.4 4.2 3.7" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.2" />
+    </svg>
+  );
+}

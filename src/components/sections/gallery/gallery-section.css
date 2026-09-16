@@ -1,0 +1,51 @@
+.gallery-pattern::after {
+  position: absolute;
+  bottom: -70px;
+  left: -105px;
+  width: 520px;
+  height: 520px;
+  background: url("/assets/patterns/girih-grid.png") center / contain no-repeat;
+  content: "";
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.mosaic {
+  grid-template-areas:
+    "copy-two image-three copy-one"
+    "image-two copy-three image-one";
+}
+
+.mosaic-copy--one { grid-area: copy-one; }
+.mosaic-image--one { grid-area: image-one; }
+.mosaic-copy--two { grid-area: copy-two; }
+.mosaic-image--two { grid-area: image-two; }
+.mosaic-copy--three { grid-area: copy-three; }
+.mosaic-image--three { grid-area: image-three; }
+
+@media (min-width: 901px) {
+  .mosaic {
+    aspect-ratio: 2.08;
+  }
+
+  .mosaic > * {
+    min-height: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-pattern::after {
+    bottom: -50px;
+    left: -170px;
+    width: 290px;
+    height: 290px;
+  }
+
+  .mosaic {
+    grid-template-areas:
+      "copy-two image-two copy-one"
+      "image-three copy-three image-one";
+  }
+}

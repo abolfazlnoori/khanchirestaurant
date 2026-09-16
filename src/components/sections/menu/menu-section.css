@@ -1,0 +1,11 @@
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-areas:
+      "featured regular-one"
+      "featured regular-two";
+  }
+
+  .menu-card:nth-child(1) { grid-area: regular-two; }
+  .menu-card:nth-child(2) { grid-area: featured; }
+  .menu-card:nth-child(3) { grid-area: regular-one; }
+}
