@@ -11,7 +11,7 @@ export function SiteHeader() {
           <SiteBrand />
           <DesktopNavigation />
 
-          <a className="col-start-1 row-start-1 inline-flex min-h-11 items-center justify-self-start gap-3 text-sm font-semibold [direction:rtl] [&_svg]:size-[17px] [&_svg]:transition-transform hover:[&_svg]:-translate-x-1" href="#menu">
+          <a className="col-start-1 row-start-1 inline-flex min-h-11 items-center justify-self-start gap-3 text-sm font-semibold [direction:rtl] [&_svg]:size-[17px] [&_svg]:transition-transform hover:[&_svg]:-translate-x-1" href="/menu">
             مشاهده منو
             <ArrowLeft />
           </a>

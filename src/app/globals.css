@@ -4,6 +4,80 @@
 @import "../components/sections/story/story-section.css";
 @import "../components/sections/gallery/gallery-section.css";
 
+/* Font aliases used by the menu experience, backed by the same local Khanchi type family. */
+@font-face {
+  font-family: "IRANSansX:Regular";
+  src: url("/assets/fonts/AbarHighFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX:Medium";
+  src: url("/assets/fonts/AbarHighFaNum-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX:DemiBold";
+  src: url("/assets/fonts/AbarHighFaNum-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANSansX:Bold";
+  src: url("/assets/fonts/AbarHighFaNum-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Abar High:Regular";
+  src: url("/assets/fonts/AbarHighFaNum-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Abar High:SemiBold";
+  src: url("/assets/fonts/AbarHighFaNum-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Abar High:Bold";
+  src: url("/assets/fonts/AbarHighFaNum-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Menu Latin";
+  src: url("/assets/fonts/AbarHigh-Regular.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+.menu-page [style*="Cormorant Garamond"],
+.menu-page [style*="Inter:Medium"],
+.menu-page [style*="Lora"],
+.menu-page [style*="Maname"] {
+  font-family: "Menu Latin", Georgia, serif !important;
+}
+
+.menu-page button,
+.menu-page input {
+  font: inherit;
+}
+
+.menu-page button:not(:disabled),
+.menu-page a {
+  cursor: pointer;
+}
+
 :root {
   --ink: #002b17;
   --forest: #002b17;
