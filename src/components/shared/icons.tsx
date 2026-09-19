@@ -18,6 +18,14 @@ export function MenuIcon({ className }: IconProps) {
   );
 }
 
+export function HomeIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4.5 10.25 12 4l7.5 6.25v8.25a1.5 1.5 0 0 1-1.5 1.5h-4.25v-5.5h-3.5V20H6a1.5 1.5 0 0 1-1.5-1.5v-8.25Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.45" />
+    </svg>
+  );
+}
+
 export function StarIcon({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 16 16" aria-hidden="true">

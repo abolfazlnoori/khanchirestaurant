@@ -4,7 +4,7 @@ import { FooterCta } from "./footer-cta";
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-cream max-[420px]:mt-[5px] max-[420px]:bg-cream-mobile">
+    <footer id="contact" className="site-footer bg-cream max-[420px]:mt-[5px] max-[420px]:bg-cream-mobile">
       <FooterCta />
       <FooterContactGrid />
       <FooterBrandBar />

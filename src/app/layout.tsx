@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -16,6 +16,12 @@ const abar = localFont({
 export const metadata: Metadata = {
   title: "خانچی | رستوران اصیل ایرانی",
   description: "خانچی، روایتی معاصر از طعم اصیل و مهمان‌نوازی ایرانی در سعادت‌آباد تهران.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
