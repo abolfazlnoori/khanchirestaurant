@@ -1,4 +1,5 @@
 import { SectionLabel } from "@/components/shared/section-label";
+import { MobileReviewsCarousel } from "./mobile-reviews-carousel";
 import { ReviewCard } from "./review-card";
 import { reviews } from "./reviews.data";
 
@@ -11,10 +12,11 @@ export function ReviewsSection() {
         <p className="mt-5 text-[17px] text-muted max-[900px]:hidden">نظرات شما مهمانان عزیز، مسیر خانچی را شفاف‌تر می‌کند.</p>
       </div>
 
-      <div className="mx-auto mt-[52px] grid w-[min(1248px,calc(100%-64px))] grid-cols-3 max-[900px]:mt-[26px] max-[900px]:block max-[900px]:w-[calc(100%-48px)] max-[420px]:w-[calc(100%-24px)]">
+      <div className="mx-auto mt-[52px] grid w-[min(1248px,calc(100%-64px))] grid-cols-3 max-[900px]:hidden">
         {reviews.map((review) => <ReviewCard key={review.quote} {...review} />)}
       </div>
-      <div className="mt-[22px] hidden items-center justify-center gap-[9px] [direction:ltr] max-[900px]:flex" aria-hidden="true"><span className="h-0.5 w-11 bg-gold" /><i className="size-[5px] rounded-full bg-[#d7d2c9]" /><i className="size-[5px] rounded-full bg-[#d7d2c9]" /></div>
+
+      <MobileReviewsCarousel />
     </section>
   );
 }
