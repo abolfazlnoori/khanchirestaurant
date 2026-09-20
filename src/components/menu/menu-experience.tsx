@@ -27,7 +27,6 @@ import type { Diet } from './menu-data';
 
 const assetPathPrefix = '/assets/menu';
 const imgEyebrowRule = `${assetPathPrefix}/85571.svg`;
-const imgFooterRule = `${assetPathPrefix}/e75ca.svg`;
 const imgStarters = `${assetPathPrefix}/c78bb.png`;
 const imgMain = `${assetPathPrefix}/e5fa0.png`;
 const imgDrinks = `${assetPathPrefix}/71c5e.png`;
@@ -292,7 +291,7 @@ function MenuCard({ item, qty, onAdd, onDec }: { item: MenuItem; qty: number; on
           {item.description}
         </p>
 
-        <div className="mt-2 flex w-full items-center justify-between gap-3 border-t border-[#ebe5da] pt-3">
+        <div className="mt-2 flex w-full items-center justify-between gap-3 border-t border-[#ebe5da] pt-3 max-[900px]:mt-4 max-[900px]:pt-4">
           <div className="flex items-baseline gap-1">
             <span className="text-[20px] text-[#10231c]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
               {formatPrice(item.price)}
@@ -439,7 +438,7 @@ function MenuView({ bill, onGarson }: { bill: BillApi; onGarson: () => void }) {
             ) : (
               visibleSections.map((cat, i) => (
                 <div key={cat.id} className={i !== 0 ? 'mt-16' : ''}>
-                  <div className="mb-8 flex items-center justify-between gap-4 border-b border-[#ece7dc] pb-5 text-right">
+                  <div className="mb-8 flex items-center justify-between gap-4 border-b border-[#ece7dc] pb-5 text-right max-[900px]:mb-10 max-[900px]:pb-7">
                     <p className="hidden text-[13px] text-[#647069] sm:block" style={{ fontFamily: "'IRANSansX:Regular'" }}>
                       {cat.note}
                     </p>
@@ -723,60 +722,6 @@ function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => void }) {
   );
 }
 
-/* ============================ Footer ============================ */
-
-function Footer() {
-  const details = [
-    { label: 'اینستاگرام', values: ['@khanchi.restaurant'] },
-    { label: 'تماس', values: ['۰۲۱-۲۲۳۸ ۹۸۷۳', '۰۹۰۳ ۲۸۰ ۵۱۴۷'] },
-    { label: 'ساعات فعالیت', values: ['همه‌روزه ۱۱:۳۰ تا ۲۴:۰۰'] },
-    { label: 'موقعیت', values: ['سعادت‌آباد، تهران'] },
-  ];
-  return (
-    <footer className="bg-[#f8f6f1]">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-6 pb-8 pt-12 text-center">
-        <p className="text-[34px] text-[#10231b]" style={{ fontFamily: "'Abar High:Bold'" }}>
-          خانچی
-        </p>
-        <p className="max-w-[760px] text-[clamp(26px,4vw,42px)] leading-[1.25] text-[#10231b]" style={{ fontFamily: "'Abar High:Bold'" }}>
-          اصالت ایرانی، برای لحظه‌های امروزی
-        </p>
-        <p className="max-w-[560px] text-[14px] text-[#817c70]" style={{ fontFamily: "'IRANSansX:Regular'" }}>
-          خانچی — رستوران اصیل ایرانی در سعادت‌آباد تهران
-        </p>
-      </div>
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-        <img src={imgFooterRule} alt="" aria-hidden className="h-px w-full" />
-      </div>
-      <div className="mx-auto grid max-w-[1440px] gap-8 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:px-16">
-        {details.map((d) => (
-          <div key={d.label} className="flex flex-col items-end gap-3 text-right">
-            <p className="text-[12px] text-[#9a7444]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
-              {d.label}
-            </p>
-            {d.values.map((v) => (
-              <p key={v} className="text-[13px] text-[#10231b]" style={{ fontFamily: "'IRANSansX:Regular'" }} dir={/[A-Za-z@]/.test(v) ? 'ltr' : 'rtl'}>
-                {v}
-              </p>
-            ))}
-          </div>
-        ))}
-      </div>
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
-        <img src={imgFooterRule} alt="" aria-hidden className="h-px w-full" />
-      </div>
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-6 text-[#9a7444] lg:px-16">
-        <p className="text-[14px]" style={{ fontFamily: "'Abar High:Regular'" }}>
-          خانچی
-        </p>
-        <p className="text-[11px] tracking-wide" style={{ fontFamily: "'Cormorant Garamond:SemiBold'" }}>
-          AUTHENTIC PERSIAN CUISINE
-        </p>
-      </div>
-    </footer>
-  );
-}
-
 /* ============================ App ============================ */
 
 export default function MenuExperience() {
@@ -812,8 +757,6 @@ export default function MenuExperience() {
       ) : (
         <MenuView bill={bill} onGarson={openGarson} />
       )}
-
-      <Footer />
 
       {/* Mobile sticky bill FAB — sits above the bottom nav, never overlapping */}
       {bill.count > 0 && (

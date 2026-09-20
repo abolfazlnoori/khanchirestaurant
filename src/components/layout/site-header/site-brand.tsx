@@ -9,7 +9,7 @@ export function SiteBrand({ compact = false }: { compact?: boolean }) {
     >
       <div className="flex flex-col items-center leading-none">
         <span className={`${compact ? "text-[24px]" : "text-[26px]"} font-extrabold [direction:rtl]`}>خانچی</span>
-        <span className="mt-1.5 text-[7px] font-semibold tracking-[0.12em] text-[#69716c]" lang="en">KHANCHI RESTAURANT</span>
+        <span className="mt-2 text-[7px] font-semibold tracking-[0.12em] text-[#69716c]" lang="en">KHANCHI RESTAURANT</span>
       </div>
       {!compact && (
         <>

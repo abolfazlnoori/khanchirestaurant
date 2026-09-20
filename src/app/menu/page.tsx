@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteFooter } from "@/components/layout/site-footer/site-footer";
 import MenuExperience from "@/components/menu/menu-experience";
 
 export const metadata: Metadata = {
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 };
 
 export default function MenuPage() {
-  return <MenuExperience />;
+  return (
+    <>
+      <MenuExperience />
+      <SiteFooter />
+    </>
+  );
 }

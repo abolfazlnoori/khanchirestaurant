@@ -21,8 +21,8 @@ export function SiteHeader({ activePage }: { activePage: NavigationItemId }) {
             href="tel:+982122389873"
             aria-label="تماس با رستوران خانچی"
           >
-            <PhoneIcon className="size-[16px] transition-transform duration-200 group-hover:-rotate-12" />
             تماس با ما
+            <PhoneIcon className="size-[16px] transition-transform duration-200 group-hover:-rotate-12" />
           </a>
         </div>
       </header>
