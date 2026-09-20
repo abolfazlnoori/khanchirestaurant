@@ -3,6 +3,7 @@
 import { formatPrice } from "./menu-data";
 import {
   IconChevronLeft,
+  IconClose,
   IconMenuBook,
   IconMinus,
   IconNote,
@@ -250,11 +251,18 @@ export function BillSheet({
         className="absolute inset-0 bg-[#10231c]/45 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="absolute inset-x-0 bottom-0 flex max-h-[92vh] flex-col overflow-hidden rounded-t-[18px] border-t border-[#e2ddd2] bg-[#fafafa] shadow-[0_-24px_60px_-24px_rgba(16,35,28,0.6)]">
+      <div
+        className="absolute inset-x-0 flex flex-col overflow-hidden rounded-t-[18px] border-t border-[#e2ddd2] bg-[#fafafa] shadow-[0_-24px_60px_-24px_rgba(16,35,28,0.6)]"
+        style={{
+          bottom: "calc(66px + env(safe-area-inset-bottom))",
+          maxHeight:
+            "calc(100dvh - 66px - env(safe-area-inset-bottom) - 16px)",
+        }}
+      >
         <div className="flex items-center justify-between px-5 pb-1 pt-3">
           <div className="mx-auto h-1 w-12 rounded-full bg-[#d9d2c4]" />
         </div>
-        <div className="overflow-y-auto pb-[env(safe-area-inset-bottom)]">
+        <div className="min-h-0 flex-1 overflow-y-auto">
           <BillContents bill={bill} onGarson={onGarson} variant="sheet" />
         </div>
       </div>
