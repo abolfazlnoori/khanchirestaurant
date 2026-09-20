@@ -9,3 +9,12 @@
   .menu-card:nth-child(2) { grid-area: featured; }
   .menu-card:nth-child(3) { grid-area: regular-one; }
 }
+
+@media (max-width: 560px) {
+  .menu-grid {
+    grid-template-areas:
+      "featured"
+      "regular-one"
+      "regular-two";
+  }
+}
