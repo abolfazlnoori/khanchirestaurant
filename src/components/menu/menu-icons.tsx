@@ -125,6 +125,17 @@ export function IconPlus(p: IconProps) {
   );
 }
 
+export function IconCartPlus(p: IconProps) {
+  return (
+    <svg {...base(p)}>
+      <path d="M3 4h2l1.6 10.2a2 2 0 0 0 2 1.7h7.9a2 2 0 0 0 1.9-1.4L20 8H7" />
+      <path d="M13 8V4M11 6h4" />
+      <circle cx="9" cy="20" r="1" />
+      <circle cx="17" cy="20" r="1" />
+    </svg>
+  );
+}
+
 export function IconMinus(p: IconProps) {
   return (
     <svg {...base(p)}>
