@@ -67,7 +67,9 @@ export default function MenuExperience() {
             className="text-[15px]"
             style={{ fontFamily: "'IRANSansX:DemiBold'" }}
           >
-            {formatPrice(bill.total)} تومان
+            {bill.hasMissingPrices
+              ? "قیمت نامشخص"
+              : `${formatPrice(bill.total)} تومان`}
           </span>
         </button>
       )}

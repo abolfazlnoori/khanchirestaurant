@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { MenuItem } from "./menu-data";
 import { formatPrice } from "./menu-data";
 import { DietBadge } from "./menu-primitives";
@@ -9,6 +8,7 @@ import {
   IconPlus,
   IconStar,
 } from "./menu-icons";
+import { ProductVisual } from "./product-visual";
 
 type MenuItemCardProps = {
   item: MenuItem;
@@ -29,13 +29,11 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
       }`}
     >
       <div className="relative h-[200px] overflow-hidden bg-[#e6e2da]">
-        <Image
-          src={item.image}
-          alt={item.name}
-          fill
+        <ProductVisual
+          product={item}
           sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1280px) 50vw, 33vw"
-          className={`object-cover transition-transform duration-700 ${
-            item.unavailable ? "grayscale" : "group-hover:scale-105"
+          className={`transition-transform duration-700 ${
+            item.unavailable ? "grayscale" : "group-hover:scale-[1.015]"
           }`}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#10231c]/10 to-transparent" />
@@ -50,6 +48,14 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
             </span>
           )}
           {item.diet.map((diet) => <DietBadge key={diet} diet={diet} />)}
+          {item.needsReview && (
+            <span
+              className="rounded-[1px] border border-[#d8b06a]/30 bg-[#f6f2ec]/90 px-2 py-[3px] text-[9px] text-[#7a5528]"
+              style={{ fontFamily: "'IRANSansX:DemiBold'" }}
+            >
+              نام نیازمند بررسی
+            </span>
+          )}
         </div>
         {item.unavailable && (
           <div className="absolute inset-0 grid place-items-center bg-[#f6f2ec]/45">
@@ -73,21 +79,29 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
         <h4 className="text-[19px] text-[#17231c]" style={{ fontFamily: "'Abar High:SemiBold'" }}>
           {item.name}
         </h4>
-        <p className="text-[10px] uppercase tracking-[0.14em] text-[#a3937a]" style={{ fontFamily: "'Inter:Medium'" }}>
-          {item.latin}
-        </p>
         <p className="min-h-[36px] text-[12px] leading-[1.85] text-[#6e706a]" style={{ fontFamily: "'IRANSansX:Regular'" }}>
-          {item.description}
+          {item.description || "توضیحات تکمیلی به‌زودی درج می‌شود."}
         </p>
 
         <div className="mt-2 flex w-full items-center justify-between gap-3 border-t border-[#ebe5da] pt-3 max-[900px]:mt-4 max-[900px]:pt-4">
           <div className="flex items-baseline gap-1">
-            <span className="text-[20px] text-[#10231c]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
-              {formatPrice(item.price)}
-            </span>
-            <span className="text-[10px] text-[#9a6d32]" style={{ fontFamily: "'IRANSansX:Regular'" }}>
-              تومان
-            </span>
+            {item.price === null ? (
+              <span
+                className="text-[12px] text-[#8c857a]"
+                style={{ fontFamily: "'IRANSansX:Medium'" }}
+              >
+                قیمت درج نشده
+              </span>
+            ) : (
+              <>
+                <span className="text-[20px] text-[#10231c]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
+                  {formatPrice(item.price)}
+                </span>
+                <span className="text-[10px] text-[#9a6d32]" style={{ fontFamily: "'IRANSansX:Regular'" }}>
+                  تومان
+                </span>
+              </>
+            )}
           </div>
 
           {item.unavailable ? (

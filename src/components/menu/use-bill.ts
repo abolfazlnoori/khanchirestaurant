@@ -55,9 +55,24 @@ export function useBill() {
   const clear = () => setBill({});
   const entries = Object.values(bill);
   const count = entries.reduce((sum, entry) => sum + entry.qty, 0);
-  const total = entries.reduce((sum, entry) => sum + entry.qty * entry.item.price, 0);
+  const total = entries.reduce(
+    (sum, entry) => sum + entry.qty * (entry.item.price ?? 0),
+    0,
+  );
+  const hasMissingPrices = entries.some((entry) => entry.item.price === null);
 
-  return { bill, add, dec, remove, setNote, clear, entries, count, total };
+  return {
+    bill,
+    add,
+    dec,
+    remove,
+    setNote,
+    clear,
+    entries,
+    count,
+    total,
+    hasMissingPrices,
+  };
 }
 
 export type BillApi = ReturnType<typeof useBill>;

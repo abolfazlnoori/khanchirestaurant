@@ -1,0 +1,666 @@
+{
+  "currency": "تومان",
+  "priceUnit": 1,
+  "categories": [
+    {
+      "id": "stews-without-rice",
+      "title": "خورشت بدون پلو",
+      "kicker": "PERSIAN STEWS",
+      "note": "خورشت‌های اصیل، بدون پلو",
+      "products": [
+        {
+          "id": "gheimeh-stew",
+          "name": "خورشت قیمه (بادمجان و سیب‌زمینی)",
+          "description": "۲۵۰ گرم خورشت و ۸۰ گرم گوشت",
+          "price": 445000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "ghormeh-sabzi-stew",
+          "name": "خورشت قورمه‌سبزی",
+          "description": "۲۵۰ گرم خورشت و ۸۰ گرم گوشت",
+          "price": 415000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "gheimeh-nesar-stew",
+          "name": "خورشت قیمه‌نثار",
+          "description": "۱۵۰ گرم گوشت و ۲۲۰ گرم نثار",
+          "price": 730000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "fesenjan-stew",
+          "name": "خورشت فسنجان",
+          "description": "۲۵۰ گرم خورشت و ۸۰ گرم فیله مرغ",
+          "price": 610000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "koofteh-tabrizi-stew",
+          "name": "خورشت کوفته تبریزی",
+          "description": "۲۰۰ گرم کوفته گوسفندی",
+          "price": 450000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "chicken-khorak",
+          "name": "خوراک مرغ",
+          "description": "۴۵۰ گرم مرغ",
+          "price": 490000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "mahicheh-khorak",
+          "name": "خوراک ماهیچه",
+          "description": "",
+          "price": 1725000,
+          "category": "stews-without-rice",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "title": "پلوها",
+      "kicker": "PERSIAN RICE",
+      "note": "برنج ایرانی و عطر زعفران",
+      "products": [
+        {
+          "id": "chelo-kareh",
+          "name": "چلو کره",
+          "description": "۳۵۰ گرم برنج ایرانی",
+          "price": 210000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "baghali-polo",
+          "name": "باقالی‌پلو",
+          "description": "۴۰۰ گرم باقالی و شوید",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "zereshk-polo",
+          "name": "زرشک‌پلو",
+          "description": "۴۰۰ گرم برنج با زرشک و زعفران",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "tahchin-polo",
+          "name": "ته‌چین پلو",
+          "description": "۳۸۰ گرم؛ شامل ته‌چین، گوجه و خلال",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "rice-and-stews",
+      "title": "چلوخورشت و غذاهای همراه برنج",
+      "kicker": "RICE & STEW",
+      "note": "خورشت‌های ایرانی همراه برنج",
+      "products": [
+        {
+          "id": "ghormeh-sabzi-with-rice",
+          "name": "قورمه‌سبزی با برنج",
+          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
+          "price": 645000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "gheimeh-with-rice",
+          "name": "قیمه سیب‌زمینی (بادمجان) با برنج",
+          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
+          "price": 635000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "fesenjan-with-rice",
+          "name": "فسنجان با برنج",
+          "description": "۲۵۰ گرم برنج و ۸۰ گرم فیله مرغ",
+          "price": 730000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "gheimeh-nesar",
+          "name": "قیمه‌نثار",
+          "description": "۱۵۰ گرم گوشت و ۲۲۰ گرم نثار",
+          "price": 1280000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "zereshk-polo-fried-chicken",
+          "name": "زرشک‌پلو با ران مرغ سرخ‌شده",
+          "description": "۴۰۰ گرم برنج و ۳۰۰ گرم ران مرغ",
+          "price": 795000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "baghali-polo-mahicheh",
+          "name": "باقالی‌پلو با ماهیچه",
+          "description": "۴۵۰ گرم ماهیچه و ۲۸۰ گرم باقالی‌پلو",
+          "price": 2050000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "chelo-koofteh-tabrizi",
+          "name": "چلوخورشت کوفته تبریزی",
+          "description": "۲۰۰ گرم گوشت گوسفندی",
+          "price": 1350000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "traditional",
+      "title": "غذاهای سنتی",
+      "kicker": "TRADITIONAL",
+      "note": "دستورهای ماندگار ایرانی",
+      "products": [
+        {
+          "id": "dizi-haji",
+          "name": "دیزی حاجی",
+          "description": "۱۸۰ گرم گوشت، ۲۰۰ گرم دنبه و مخلفات",
+          "price": 860000,
+          "category": "traditional",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "koofteh-tabrizi",
+          "name": "کوفته تبریزی",
+          "description": "۳۰۰ گرم؛ مخلوط گوشت، لپه، سبزی‌ها و ادویه مخصوص",
+          "price": 580000,
+          "category": "traditional",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "halim-bademjan",
+          "name": "حلیم بادمجان",
+          "description": "۲۵۰ گرم گوشت چرخ‌کرده، سبزیجات و حبوبات",
+          "price": 420000,
+          "category": "traditional",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "kebabs",
+      "title": "کباب‌ها",
+      "kicker": "CHARCOAL GRILL",
+      "note": "کباب‌های زغالی و ترکیبی",
+      "products": [
+        {
+          "id": "khatoon-kebab",
+          "name": "خاتون",
+          "description": "۹۰۰ گرم برنج و ۳۰۰ گرم راسته گوسفندی",
+          "price": 1650000,
+          "category": "kebabs",
+          "image": null,
+          "tags": [],
+          "needsReview": true
+        },
+        {
+          "id": "loghmeh-kebab",
+          "name": "لقمه",
+          "description": "۲۵۰ گرم کباب",
+          "price": 780000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "rangin-kaman-kebab",
+          "name": "رنگین‌کمان",
+          "description": "۵۰۰ گرم",
+          "price": 1780000,
+          "category": "kebabs",
+          "image": null,
+          "tags": [],
+          "needsReview": true
+        },
+        {
+          "id": "anana-kebab",
+          "name": "آنانا کباب",
+          "description": "۷۵۰ گرم مخلوط گوشت گوساله و گوسفندی؛ تند",
+          "price": 960000,
+          "category": "kebabs",
+          "image": null,
+          "tags": ["spicy"]
+        },
+        {
+          "id": "saffron-chicken-kebab",
+          "name": "جوجه‌کباب زعفرانی",
+          "description": "۲۰۰ گرم ران",
+          "price": 870000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "khorshid-saffron",
+          "name": "خورشید زعفرانی",
+          "description": "۳۰۰ گرم",
+          "price": 810000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "sour-chicken-kebab",
+          "name": "جوجه ترش",
+          "description": "۳۰۰ گرم؛ ادویه مخصوص، انار و گردو",
+          "price": 1040000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "lamb-barg",
+          "name": "برگ گوسفندی",
+          "description": "۳۰۰ گرم",
+          "price": 1780000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "kaseh-kebab",
+          "name": "کاسه‌کباب",
+          "description": "۲۰۰ گرم کوبیده، ۲۰۰ گرم جوجه و ۱۰۰ گرم چنجه",
+          "price": 1380000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "special-vaziri",
+          "name": "وزیری ویژه",
+          "description": "۲۰۰ گرم جوجه و ۱۴۰ گرم کوبیده",
+          "price": 910000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "vaziri-thigh-kebab",
+          "name": "کباب وزیری ران",
+          "description": "۳۰۰ گرم جوجه و ۱۴۰ گرم کوبیده",
+          "price": 1030000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "soltani-kebab",
+          "name": "کباب سلطانی",
+          "description": "۳۰۰ گرم برگ گوسفندی و ۱۵۰ گرم کوبیده",
+          "price": 2450000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "bakhtiari-kebab",
+          "name": "کباب بختیاری",
+          "description": "۲۵۰ گرم گوشت گوسفندی و ۱۵۰ گرم جوجه زعفرانی",
+          "price": 1250000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "curry-kebab",
+          "name": "کباب کاری",
+          "description": "۳۰۰ گرم",
+          "price": 1050000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "chef-platter",
+          "name": "سینی سرآشپز (۴ تا ۶ نفره)",
+          "description": "کباب کاری، جوجه سیخی، کباب برگ، شیشلیک، نارنج، سیرترشی، سبزیجات، ۴ پرس برنج، ۲ سالاد فصل، ۲ ماست موسیر و ۲ نوشابه",
+          "price": 6800000,
+          "category": "kebabs",
+          "image": null,
+          "tags": ["sharing"]
+        },
+        {
+          "id": "economic-platter",
+          "name": "سینی اقتصادی (۴ تا ۶ نفره)",
+          "description": "۲ سیخ کوبیده ۱۴۰ گرمی، ۲ عدد جوجه ۲۰۰ گرمی، ۴ عدد برنج، ۲ ماست چکیده و گوجه",
+          "price": null,
+          "category": "kebabs",
+          "image": null,
+          "tags": ["sharing"]
+        }
+      ]
+    },
+    {
+      "id": "starters",
+      "title": "پیش‌غذاها",
+      "kicker": "STARTERS",
+      "note": "شروعی گرم و آشنا",
+      "products": [
+        {
+          "id": "barley-mushroom-soup",
+          "name": "سوپ جو با قارچ و شیر",
+          "description": "۵۰۰ گرم",
+          "price": 340000,
+          "category": "starters",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "mirza-ghasemi",
+          "name": "میرزاقاسمی",
+          "description": "۲۵۰ گرم",
+          "price": 350000,
+          "category": "starters",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "kashk-bademjan",
+          "name": "کشک بادمجان",
+          "description": "۲۵۰ گرم",
+          "price": 400000,
+          "category": "starters",
+          "image": null,
+          "tags": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "title": "سالادها",
+      "kicker": "FRESH SALADS",
+      "note": "سبزیجات تازه و سس‌های خانچی",
+      "products": [
+        {
+          "id": "seasonal-salad",
+          "name": "سالاد فصل",
+          "description": "کاهو، خیار، کلم، گوجه، زیتون، ذرت و هویج؛ با سس مخصوص",
+          "price": 180000,
+          "category": "salads",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "shirazi-salad",
+          "name": "سالاد شیرازی",
+          "description": "خیار، گوجه، پیاز و نعنا",
+          "price": 120000,
+          "category": "salads",
+          "image": null,
+          "tags": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "id": "condiments",
+      "title": "چاشنی‌ها",
+      "kicker": "SIDES & CONDIMENTS",
+      "note": "همراهان سفرهٔ ایرانی",
+      "products": [
+        {
+          "id": "mast-moosir",
+          "name": "ماست موسیر",
+          "description": "۲۳۰ گرم",
+          "price": 120000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "strained-yogurt",
+          "name": "ماست چکیده",
+          "description": "۱۷۰ گرم",
+          "price": 120000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "mast-khiar",
+          "name": "ماست خیار",
+          "description": "۲۵۰ گرم",
+          "price": 160000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "spinach-borani",
+          "name": "بورانی اسفناج",
+          "description": "۱۷۰ گرم",
+          "price": 160000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "eggplant-borani",
+          "name": "بورانی بادمجان",
+          "description": "۱۷۰ گرم",
+          "price": 170000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "brined-olives",
+          "name": "زیتون شور",
+          "description": "۱۲۰ گرم",
+          "price": 140000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "marinated-olives",
+          "name": "زیتون پرورده",
+          "description": "۱۲۰ گرم",
+          "price": 180000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "mixed-pickles",
+          "name": "ترشی مخلوط",
+          "description": "۱۸۰ گرم",
+          "price": 140000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        },
+        {
+          "id": "garlic-pickles",
+          "name": "ترشی سیر",
+          "description": "",
+          "price": 140000,
+          "category": "condiments",
+          "image": null,
+          "tags": ["vegetarian"]
+        }
+      ]
+    },
+    {
+      "id": "tea-and-herbal",
+      "title": "سرویس چای و دمنوش",
+      "kicker": "TEA & INFUSIONS",
+      "note": "پایانی گرم برای سفرهٔ خانچی",
+      "products": [
+        {
+          "id": "tea-service-two",
+          "name": "سرویس چای دو نفره",
+          "description": "نبات، گل محمدی و هل",
+          "price": 360000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "tea-service-one",
+          "name": "سرویس چای یک نفره",
+          "description": "نبات، گل محمدی و هل",
+          "price": 190000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "tea-service-three",
+          "name": "سرویس چای سه نفره",
+          "description": "",
+          "price": 490000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "tea-service-four",
+          "name": "سرویس چای چهار نفره",
+          "description": "",
+          "price": 670000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "saffron-tea-one",
+          "name": "چای زعفران یک نفره",
+          "description": "",
+          "price": 410000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "saffron-tea-two",
+          "name": "چای زعفران دو نفره",
+          "description": "",
+          "price": 610000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "saffron-tea-three-four",
+          "name": "چای زعفران سه تا چهار نفره",
+          "description": "",
+          "price": 910000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "green-tea",
+          "name": "چای سبز",
+          "description": "نبات",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "sour-tea",
+          "name": "چای ترش",
+          "description": "",
+          "price": 198000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "borage-infusion",
+          "name": "گل گاوزبان",
+          "description": "",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "lemongrass-infusion",
+          "name": "دمنوش لمون‌گرس (Lemon grass)",
+          "description": "",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "chamomile-infusion",
+          "name": "دمنوش بابونه",
+          "description": "",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "lemon-verbena-infusion",
+          "name": "دمنوش به‌لیمو",
+          "description": "",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "sibak-infusion",
+          "name": "دمنوش سیبک",
+          "description": "",
+          "price": 210000,
+          "category": "tea-and-herbal",
+          "image": null,
+          "tags": [],
+          "needsReview": true
+        }
+      ]
+    }
+  ]
+}

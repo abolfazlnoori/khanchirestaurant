@@ -88,7 +88,15 @@ export function IconDessert(p: IconProps) {
 }
 
 export const categoryIcon: Record<string, (p: IconProps) => ReactElement> = {
+  'stews-without-rice': IconMains,
+  rice: IconDessert,
+  'rice-and-stews': IconMains,
+  traditional: IconStarters,
+  kebabs: IconMains,
   starters: IconStarters,
+  salads: IconStarters,
+  condiments: IconDessert,
+  'tea-and-herbal': IconDrinks,
   mains: IconMains,
   burger: IconBurger,
   pizza: IconPizza,

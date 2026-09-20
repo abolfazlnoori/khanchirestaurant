@@ -19,7 +19,7 @@ function CategoryRail({
     ...categories.map((category) => ({
       id: category.id,
       title: category.title,
-      icon: categoryIcon[category.id],
+      icon: categoryIcon[category.id] ?? IconMenuBook,
     })),
   ];
 
@@ -77,7 +77,7 @@ export function MenuView({
           (item) =>
             !normalizedQuery ||
             item.name.includes(query.trim()) ||
-            item.latin.toLowerCase().includes(normalizedQuery),
+            item.description.includes(query.trim()),
         ),
       }))
       .filter((category) => category.items.length > 0);
@@ -147,7 +147,7 @@ export function MenuView({
                   <div className="mb-8 flex items-center justify-between gap-4 border-b border-[#ece7dc] pb-5 text-right max-[900px]:mb-10 max-[900px]:pb-7">
                     <div className="flex items-center gap-3">
                       <span className="grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[2px] border border-[#e6ddce] bg-[#f6f2ec] text-[#9a6d32]">
-                        {categoryIcon[category.id]?.({ size: 24 })}
+                        {(categoryIcon[category.id] ?? IconMenuBook)({ size: 24 })}
                       </span>
                       <div>
                         <h3

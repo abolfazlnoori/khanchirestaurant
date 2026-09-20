@@ -1,10 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { formatPrice } from "./menu-data";
 import {
   IconChevronLeft,
-  IconClose,
   IconMenuBook,
   IconMinus,
   IconNote,
@@ -12,6 +10,7 @@ import {
   IconReceipt,
   IconTrash,
 } from "./menu-icons";
+import { ProductVisual } from "./product-visual";
 import type { BillApi } from "./use-bill";
 
 export function BillContents({
@@ -83,14 +82,8 @@ export function BillContents({
             {bill.entries.map(({ item, qty, note }) => (
               <li key={item.id} className="px-4 py-4">
                 <div className="flex gap-3">
-                  <div className="relative h-[58px] w-[58px] shrink-0 overflow-hidden rounded-[2px] bg-[#e6e2da]">
-                    <Image
-                      src={item.image}
-                      alt=""
-                      fill
-                      sizes="58px"
-                      className="object-cover"
-                    />
+                  <div className="h-[58px] w-[58px] shrink-0 overflow-hidden rounded-[2px]">
+                    <ProductVisual product={item} sizes="58px" />
                   </div>
                   <div className="flex-1 text-right">
                     <div className="flex items-start justify-between gap-2">
@@ -113,20 +106,28 @@ export function BillContents({
                       className="mt-0.5 text-[11px] text-[#8c857a]"
                       style={{ fontFamily: "'IRANSansX:Regular'" }}
                     >
-                      {formatPrice(item.price)} تومان / واحد
+                      {item.price === null
+                        ? "قیمت واحد درج نشده"
+                        : `${formatPrice(item.price)} تومان / واحد`}
                     </p>
                     <div className="mt-2 flex items-center justify-between">
                       <span
                         className="text-[15px] text-[#10231c]"
                         style={{ fontFamily: "'IRANSansX:DemiBold'" }}
                       >
-                        {formatPrice(item.price * qty)}
-                        <span
-                          className="mr-1 text-[10px] text-[#9a6d32]"
-                          style={{ fontFamily: "'IRANSansX:Regular'" }}
-                        >
-                          تومان
-                        </span>
+                        {item.price === null ? (
+                          "نیازمند استعلام"
+                        ) : (
+                          <>
+                            {formatPrice(item.price * qty)}
+                            <span
+                              className="mr-1 text-[10px] text-[#9a6d32]"
+                              style={{ fontFamily: "'IRANSansX:Regular'" }}
+                            >
+                              تومان
+                            </span>
+                          </>
+                        )}
                       </span>
                       <div className="inline-flex items-center overflow-hidden rounded-[1px] border border-[#d9d2c4] bg-[#fafafa]">
                         <button
@@ -182,13 +183,19 @@ export function BillContents({
                 className="text-[26px] text-[#10231c]"
                 style={{ fontFamily: "'IRANSansX:Bold'" }}
               >
-                {formatPrice(bill.total)}
-                <span
-                  className="mr-1 text-[12px] text-[#9a6d32]"
-                  style={{ fontFamily: "'IRANSansX:Regular'" }}
-                >
-                  تومان
-                </span>
+                {bill.hasMissingPrices ? (
+                  "پس از استعلام"
+                ) : (
+                  <>
+                    {formatPrice(bill.total)}
+                    <span
+                      className="mr-1 text-[12px] text-[#9a6d32]"
+                      style={{ fontFamily: "'IRANSansX:Regular'" }}
+                    >
+                      تومان
+                    </span>
+                  </>
+                )}
               </span>
             </div>
 
@@ -247,14 +254,6 @@ export function BillSheet({
         <div className="flex items-center justify-between px-5 pb-1 pt-3">
           <div className="mx-auto h-1 w-12 rounded-full bg-[#d9d2c4]" />
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute left-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-[#e2ddd2] bg-[#fafafa] text-[#647069]"
-          aria-label="بستن"
-        >
-          <IconClose size={18} />
-        </button>
         <div className="overflow-y-auto pb-[env(safe-area-inset-bottom)]">
           <BillContents bill={bill} onGarson={onGarson} variant="sheet" />
         </div>
@@ -320,7 +319,9 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
                   className="mt-1 text-[14px] text-[#647069]"
                   style={{ fontFamily: "'IRANSansX:Regular'" }}
                 >
-                  {formatPrice(item.price * qty)} تومان
+                  {item.price === null
+                    ? "قیمت درج نشده"
+                    : `${formatPrice(item.price * qty)} تومان`}
                 </p>
               </div>
               <span
@@ -352,7 +353,9 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
             className="text-[30px]"
             style={{ fontFamily: "'IRANSansX:Bold'" }}
           >
-            {formatPrice(bill.total)} تومان
+            {bill.hasMissingPrices
+              ? "پس از استعلام"
+              : `${formatPrice(bill.total)} تومان`}
           </span>
         </div>
 
