@@ -16,7 +16,7 @@ export const menuItems: readonly MenuItem[] = [
     description: "با مجموعه‌ای سنجیده از نوشیدنی‌ها، لذت خود را بیشتر کنید؛ انتخاب‌هایی طراحی‌شده برای ساختن همراهی‌ای دلنشین و برجسته‌تر کردن طعم‌ها.",
   },
   {
-    image: "/assets/images/menu-main.png",
+    image: "/assets/images/0b2e8bc985267af978600997f5bf830e9340ebd1.jpg",
     imageAlt: "بشقاب غذای اصلی گریل‌شده با کنجد",
     eyebrow: "SIGNATURE • FIRE",
     title: "غذای اصلی",
