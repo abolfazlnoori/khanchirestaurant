@@ -1,6 +1,6 @@
 export const navigationItems = [
-  { href: "/#story", label: "داستان خانچی" },
-  { href: "/#experience", label: "تجربه میزبانی" },
-  { href: "/#gallery", label: "گالری" },
-  { href: "/#contact", label: "اطلاعات تماس" },
+  { id: "home", href: "/", label: "خانه" },
+  { id: "menu", href: "/menu", label: "منو" },
 ] as const;
+
+export type NavigationItemId = (typeof navigationItems)[number]["id"];

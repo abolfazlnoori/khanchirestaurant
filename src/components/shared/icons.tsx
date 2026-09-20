@@ -26,6 +26,14 @@ export function HomeIcon({ className }: IconProps) {
   );
 }
 
+export function PhoneIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.15 4.5 10 8.65 7.9 10.3a14.1 14.1 0 0 0 5.8 5.8L15.35 14l4.15 1.85v2.65a1.5 1.5 0 0 1-1.5 1.5C10.27 20 4 13.73 4 6a1.5 1.5 0 0 1 1.5-1.5h2.65Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+    </svg>
+  );
+}
+
 export function StarIcon({ className }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 16 16" aria-hidden="true">

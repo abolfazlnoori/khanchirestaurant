@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <SkipLink />
-      <SiteHeader />
+      <SiteHeader activePage="home" />
 
       <main id="main-content">
         <HeroSection />

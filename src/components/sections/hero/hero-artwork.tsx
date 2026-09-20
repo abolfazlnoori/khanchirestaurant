@@ -7,8 +7,8 @@ export function HeroArtwork() {
         className="absolute top-0 left-[5%] z-[2] rotate-[-8deg]
           font-serif text-[10px] leading-[1.2] tracking-[0.05em] text-[#73776f]
           [direction:ltr]
-          max-[900px]:top-[16%] max-[900px]:right-auto max-[900px]:left-[3%] max-[900px]:text-[8px]
-          w-[105px] h-[105px] flex items-center justify-center text-center rounded-full
+          max-[900px]:top-[5%] max-[900px]:right-auto max-[900px]:left-[3%] max-[900px]:text-[8px]
+          lg:w-[105px] lg:h-[105px] w-[60px] h-[60px] flex items-center justify-center text-center rounded-full
           bg-white/20 backdrop-blur-md
           border border-white/40
           shadow-[0_8px_30px_rgba(0,0,0,0.08)]

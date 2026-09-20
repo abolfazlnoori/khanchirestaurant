@@ -5,13 +5,13 @@
 
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { SiteHeader } from '@/components/layout/site-header/site-header';
 import { categories, formatPrice, type MenuItem } from './menu-data';
 import {
   categoryIcon,
   IconChevronLeft,
   IconCheck,
   IconClose,
-  IconHome,
   IconLeaf,
   IconMenuBook,
   IconMinus,
@@ -28,7 +28,6 @@ import type { Diet } from './menu-data';
 const assetPathPrefix = '/assets/menu';
 const imgEyebrowRule = `${assetPathPrefix}/85571.svg`;
 const imgFooterRule = `${assetPathPrefix}/e75ca.svg`;
-const imgWordDivider = `${assetPathPrefix}/a4cc6.svg`;
 const imgStarters = `${assetPathPrefix}/c78bb.png`;
 const imgMain = `${assetPathPrefix}/e5fa0.png`;
 const imgDrinks = `${assetPathPrefix}/71c5e.png`;
@@ -133,61 +132,6 @@ function useBill() {
 }
 
 type BillApi = ReturnType<typeof useBill>;
-
-/* ============================ Header ============================ */
-
-function Wordmark() {
-  return (
-    <div className="flex items-center gap-3" aria-label="خانچی">
-      <div className="text-right leading-none">
-        <p className="text-[28px] text-[#17221e]" style={{ fontFamily: "'Abar High:Bold'" }}>
-          خانچی
-        </p>
-        <p
-          className="mt-1 text-[6px] tracking-[0.12em] text-[#59615d]"
-          style={{ fontFamily: "'Lora:SemiBold'" }}
-        >
-          KHANCHI RESTAURANT
-        </p>
-      </div>
-      <img src={imgWordDivider} alt="" aria-hidden className="hidden h-[44px] w-px sm:block" />
-      <p
-        className="hidden text-[29px] text-[#17221e] sm:block"
-        style={{ fontFamily: "'Maname:Regular'" }}
-      >
-        KH
-      </p>
-    </div>
-  );
-}
-
-function Header({ view, onView }: { view: 'home' | 'menu'; onView: (v: 'home' | 'menu') => void }) {
-  return (
-    <header className="sticky top-0 z-40 border-b border-[#f0ebe1] bg-[#fafafa]/92 backdrop-blur-sm">
-      <div className="mx-auto flex h-[76px] max-w-[1440px] items-center justify-between px-5 lg:h-[92px] lg:px-16">
-        <Wordmark />
-
-        <nav aria-label="پیمایش اصلی" className="hidden items-center gap-9 lg:flex" style={{ fontFamily: "'IRANSansX:Medium'" }}>
-          {(['home', 'menu'] as const).map((v) => (
-            <button
-              key={v}
-              type="button"
-              onClick={() => onView(v)}
-              className={`relative text-[14px] transition-colors ${
-                view === v ? 'text-[#10231c]' : 'text-[#647069] hover:text-[#10231c]'
-              }`}
-            >
-              {v === 'home' ? 'خانه' : 'منوی رستوران'}
-              {view === v && <span className="absolute -bottom-1.5 right-0 h-[2px] w-full rounded-full bg-[#9a6d32]" />}
-            </button>
-          ))}
-          <span className="text-[14px] text-[#647069]">گالری</span>
-          <span className="text-[14px] text-[#647069]">داستان خانچی</span>
-        </nav>
-      </div>
-    </header>
-  );
-}
 
 /* ============================ Home view ============================ */
 
@@ -779,7 +723,7 @@ function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => void }) {
   );
 }
 
-/* ============================ Footer + Mobile nav ============================ */
+/* ============================ Footer ============================ */
 
 function Footer() {
   const details = [
@@ -789,7 +733,7 @@ function Footer() {
     { label: 'موقعیت', values: ['سعادت‌آباد، تهران'] },
   ];
   return (
-    <footer className="bg-[#f8f6f1] pb-24 lg:pb-0">
+    <footer className="bg-[#f8f6f1]">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-4 px-6 pb-8 pt-12 text-center">
         <p className="text-[34px] text-[#10231b]" style={{ fontFamily: "'Abar High:Bold'" }}>
           خانچی
@@ -833,39 +777,6 @@ function Footer() {
   );
 }
 
-function BottomNav({ view, onView }: { view: 'home' | 'menu'; onView: (v: 'home' | 'menu') => void }) {
-  const items = [
-    { id: 'home' as const, label: 'خانه', Icon: IconHome },
-    { id: 'menu' as const, label: 'منو', Icon: IconMenuBook },
-  ];
-  return (
-    <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#f0ebe1] bg-[#fafafa]/95 backdrop-blur-md lg:hidden"
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-    >
-      <div className="mx-auto flex max-w-[440px] items-stretch">
-        {items.map(({ id, label, Icon }) => {
-          const active = view === id;
-          return (
-            <button
-              key={id}
-              type="button"
-              onClick={() => onView(id)}
-              className={`flex flex-1 flex-col items-center gap-1 py-2.5 transition-colors ${active ? 'text-[#9a6d32]' : 'text-[#8c857a]'}`}
-            >
-              <Icon size={22} />
-              <span className="text-[11px]" style={{ fontFamily: "'IRANSansX:Medium'" }}>
-                {label}
-              </span>
-              <span className={`h-[2px] w-6 rounded-full transition-colors ${active ? 'bg-[#9a6d32]' : 'bg-transparent'}`} />
-            </button>
-          );
-        })}
-      </div>
-    </nav>
-  );
-}
-
 /* ============================ App ============================ */
 
 export default function MenuExperience() {
@@ -891,7 +802,7 @@ export default function MenuExperience() {
 
   return (
     <div dir="rtl" className="menu-page min-h-screen bg-[#fafafa] text-[#10231c]">
-      <Header view={view} onView={goto} />
+      <SiteHeader activePage="menu" />
 
       {view === 'home' ? (
         <>
@@ -923,8 +834,6 @@ export default function MenuExperience() {
           </span>
         </button>
       )}
-
-      <BottomNav view={view} onView={goto} />
 
       <BillSheet bill={bill} open={billOpen} onClose={() => setBillOpen(false)} onGarson={openGarson} />
       {garsonOpen && <GarsonView bill={bill} onClose={() => setGarsonOpen(false)} />}

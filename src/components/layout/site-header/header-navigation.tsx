@@ -1,10 +1,23 @@
+import Link from "next/link";
 import { navigationItems } from "./navigation.data";
+import type { NavigationItemId } from "./navigation.data";
 
-export function DesktopNavigation() {
+export function DesktopNavigation({ activePage }: { activePage: NavigationItemId }) {
   return (
-    <nav className="col-start-2 row-start-1 flex items-center justify-center gap-[clamp(28px,4vw,64px)] text-sm text-[#4f554f] [direction:rtl] max-[900px]:hidden" aria-label="پیمایش اصلی">
+    <nav className="flex items-center justify-center gap-12 text-[15px] [direction:rtl]" aria-label="پیمایش اصلی">
       {navigationItems.map((item) => (
-        <a className="relative inline-flex min-h-11 items-center after:absolute after:inset-x-0 after:bottom-[7px] after:h-px after:origin-right after:scale-x-0 after:bg-gold after:transition-transform after:duration-200 hover:after:scale-x-100 focus-visible:after:scale-x-100" key={item.href} href={item.href}>{item.label}</a>
+        <Link
+          className={`relative inline-flex min-h-11 items-center px-1 transition-colors after:absolute after:inset-x-1 after:bottom-[5px] after:h-[2px] after:origin-center after:rounded-full after:bg-gold after:transition-transform after:duration-300 ${
+            activePage === item.id
+              ? "font-semibold text-ink after:scale-x-100"
+              : "text-[#66706a] after:scale-x-0 hover:text-ink hover:after:scale-x-100 focus-visible:after:scale-x-100"
+          }`}
+          key={item.id}
+          href={item.href}
+          aria-current={activePage === item.id ? "page" : undefined}
+        >
+          {item.label}
+        </Link>
       ))}
     </nav>
   );
