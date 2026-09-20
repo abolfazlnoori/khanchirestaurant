@@ -49,3 +49,20 @@
       "image-three copy-three image-one";
   }
 }
+
+@media (max-width: 600px) {
+  .gallery-pattern::after {
+    bottom: -25px;
+    left: -150px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.48;
+  }
+
+  .mosaic {
+    grid-template-areas:
+      "copy-one image-one"
+      "image-two copy-two"
+      "copy-three image-three";
+  }
+}
