@@ -11,7 +11,7 @@ export function HeroMeta() {
   };
 
   return (
-    <div className="grid min-h-[128px] grid-cols-3 items-center bg-mist px-[max(5vw,64px)] text-[13px] text-[#5d635f] [direction:ltr] max-[900px]:min-h-[73px] max-[900px]:grid-cols-1 max-[900px]:px-5 max-[900px]:pb-2.5">
+    <div className="grid min-h-[128px] grid-cols-3 items-center bg-mist px-[max(5vw,64px)] text-[13px] text-[#5d635f] [direction:ltr] max-[900px]:min-h-[73px] max-[900px]:grid-cols-1 max-[900px]:px-5 max-[900px]:pb-2.5" data-motion="reveal" data-motion-delay="220">
       <div className="grid justify-self-start text-left leading-tight [direction:ltr] max-[900px]:hidden"><span lang="en">@KHANCHI.RESTAURANT</span><a href="tel:+982122389873" lang="en">021-22389873</a></div>
       <button
         className="group inline-flex min-h-11 cursor-pointer items-center justify-self-center gap-2 border-0 bg-transparent p-0 font-semibold text-ink [direction:rtl] [font:inherit]"

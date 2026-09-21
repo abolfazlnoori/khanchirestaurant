@@ -97,6 +97,9 @@
   --dock-bg: rgb(248 246 240 / 0.92);
   --dock-border: rgb(169 114 40 / 0.28);
   --dock-shadow: 0 14px 38px rgb(0 25 4 / 0.18);
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-duration: 400ms;
 }
 
 @theme inline {
@@ -144,6 +147,138 @@ section[id] {
   display: none;
 }
 
+/* Shared, one-time viewport motion. Content remains visible without JavaScript. */
+[data-motion][data-motion-ready="true"] {
+  opacity: 0;
+  transition:
+    opacity var(--motion-duration) var(--motion-ease) var(--motion-delay, 0ms),
+    transform var(--motion-duration) var(--motion-ease) var(--motion-delay, 0ms),
+    filter var(--motion-duration) var(--motion-ease) var(--motion-delay, 0ms);
+}
+
+[data-motion="reveal"][data-motion-ready="true"] {
+  transform: translate3d(0, 24px, 0);
+}
+
+[data-motion="reveal-side"][data-motion-ready="true"] {
+  transform: translate3d(-22px, 0, 0);
+}
+
+[data-motion="scale"][data-motion-ready="true"] {
+  transform: scale(0.975);
+}
+
+[data-motion][data-motion-ready="true"][data-motion-state="visible"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: none;
+}
+
+@media (min-width: 901px) {
+  [data-motion][data-motion-ready="true"] {
+    filter: blur(3px);
+  }
+}
+
+.khanchi-header-enter {
+  animation: khanchi-header-in 320ms var(--motion-ease) backwards;
+}
+
+.khanchi-hero-label,
+.khanchi-hero-title,
+.khanchi-hero-copy,
+.khanchi-hero-actions,
+.khanchi-hero-plate,
+.khanchi-hero-badge {
+  animation: khanchi-hero-in 400ms var(--motion-ease) backwards;
+}
+
+.khanchi-hero-title { animation-delay: 90ms; }
+.khanchi-hero-copy { animation-delay: 150ms; }
+.khanchi-hero-actions { animation-delay: 210ms; }
+.khanchi-hero-plate { animation-delay: 140ms; }
+.khanchi-hero-badge {
+  animation-name: khanchi-hero-badge-in;
+  animation-delay: 300ms;
+}
+
+.khanchi-fab-enter {
+  animation: khanchi-fab-in 320ms var(--motion-spring) backwards;
+}
+
+.khanchi-modal-in {
+  animation: khanchi-modal-in 360ms var(--motion-ease) backwards;
+}
+
+.khanchi-sheet-in {
+  animation: khanchi-sheet-in 320ms var(--motion-ease) backwards;
+}
+
+.khanchi-sheet-out {
+  animation: khanchi-sheet-out 220ms ease-in both;
+}
+
+.khanchi-sheet-scrim-in {
+  animation: khanchi-fade-in 200ms ease-out backwards;
+}
+
+.khanchi-sheet-scrim-out {
+  animation: khanchi-fade-out 180ms ease-in both;
+}
+
+.khanchi-quantity-pop {
+  animation: khanchi-quantity-pop 240ms var(--motion-spring) backwards;
+}
+
+@keyframes khanchi-header-in {
+  from { opacity: 0; transform: translate3d(0, -10px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes khanchi-hero-in {
+  from { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.99); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes khanchi-hero-badge-in {
+  from { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.96) rotate(-8deg); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1) rotate(-8deg); }
+}
+
+@keyframes khanchi-fab-in {
+  from { opacity: 0; transform: translate3d(0, 12px, 0) scale(0.97); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes khanchi-modal-in {
+  from { opacity: 0; transform: translate3d(0, 14px, 0) scale(0.99); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes khanchi-sheet-in {
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes khanchi-sheet-out {
+  from { opacity: 1; transform: translate3d(0, 0, 0); }
+  to { opacity: 0; transform: translate3d(0, 16px, 0); }
+}
+
+@keyframes khanchi-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes khanchi-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes khanchi-quantity-pop {
+  50% { transform: scale(1.16); }
+}
+
 a:focus-visible,
 summary:focus-visible {
   outline: 2px solid var(--gold);
@@ -155,7 +290,17 @@ summary:focus-visible {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  [data-motion] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
   }
 }
 

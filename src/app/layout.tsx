@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { MotionOrchestrator } from "@/components/shared/motion-orchestrator";
 import "./globals.css";
 
 const abar = localFont({
@@ -27,7 +28,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fa" dir="rtl" data-scroll-behavior="smooth" className={`${abar.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <MotionOrchestrator />
+        {children}
+      </body>
     </html>
   );
 }

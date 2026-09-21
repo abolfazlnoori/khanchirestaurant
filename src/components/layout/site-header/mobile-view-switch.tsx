@@ -18,14 +18,14 @@ export function MobileViewSwitch({ activePage }: { activePage: NavigationItemId 
 
           return (
             <Link
-              className={`group relative flex flex-1 flex-col items-center justify-center gap-0.5 pt-1 text-[11px] font-semibold transition-colors ${
+              className={`group relative flex flex-1 flex-col items-center justify-center gap-0.5 pt-1 text-[11px] font-semibold transition-colors active:scale-[0.97] ${
                 isActive ? "text-gold" : "text-[#7b817d] hover:text-ink"
               }`}
               href={item.href}
               key={item.id}
               aria-current={isActive ? "page" : undefined}
             >
-              <Icon className="size-[21px] transition-transform duration-200 group-active:scale-90" />
+              <Icon className={`size-[21px] transition-transform duration-200 group-active:scale-90 ${isActive ? "-translate-y-0.5" : ""}`} />
               <span>{item.label}</span>
               <span
                 className={`absolute bottom-1.5 h-[2px] w-7 rounded-full bg-gold transition-opacity ${

@@ -7,7 +7,7 @@ function FooterInfoLine({ line }: { line: FooterLink }) {
 
   return (
     <a
-      className={`block text-sm max-[900px]:leading-[2]${line.className ? ` ${line.className}` : ""}`}
+      className={`block text-sm transition-colors duration-200 hover:text-gold max-[900px]:leading-[2]${line.className ? ` ${line.className}` : ""}`}
       href={line.href}
       {...(line.external ? { rel: "noreferrer", target: "_blank", lang: "en" } : {})}
     >
@@ -21,6 +21,8 @@ export function FooterContactGrid() {
     <div className="grid grid-cols-4 border-y border-line px-[max(6vw,48px)] py-[30px] max-[900px]:grid-cols-1 max-[900px]:px-6 max-[900px]:py-4">
       {footerInfoItems.map((item, index) => (
         <div
+          data-motion="reveal"
+          data-motion-delay={String(index * 45)}
           className={`min-h-19.5 px-9 py-4 max-[900px]:min-h-0 max-[900px]:px-1 max-[900px]:py-7${index === 0 ? "" : " border-r border-line max-[900px]:border-r-0 max-[900px]:border-t"}`}
           key={item.title}
         >

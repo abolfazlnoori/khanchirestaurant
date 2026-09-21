@@ -8,6 +8,11 @@
   content: "";
   opacity: 0.52;
   pointer-events: none;
+  animation: khanchi-pattern-in 500ms var(--motion-ease) both;
+}
+
+@keyframes khanchi-pattern-in {
+  from { opacity: 0; transform: scale(0.97); }
 }
 
 .hero-pattern::before {

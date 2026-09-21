@@ -48,7 +48,7 @@ export default function MenuExperience() {
         <button
           type="button"
           onClick={() => setBillOpen(true)}
-          className="fixed inset-x-4 z-40 flex items-center justify-between rounded-[2px] bg-[#10231c] px-5 py-3.5 text-[#f8f7f5] shadow-[0_18px_40px_-18px_rgba(16,35,28,0.7)] lg:hidden"
+          className="khanchi-fab-enter fixed inset-x-4 z-40 flex items-center justify-between rounded-[2px] bg-[#10231c] px-5 py-3.5 text-[#f8f7f5] shadow-[0_18px_40px_-18px_rgba(16,35,28,0.7)] transition-transform duration-200 active:scale-[0.985] lg:hidden"
           style={{ bottom: "calc(env(safe-area-inset-bottom) + 68px)" }}
         >
           <span

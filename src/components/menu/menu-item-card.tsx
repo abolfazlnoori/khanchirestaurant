@@ -15,13 +15,16 @@ type MenuItemCardProps = {
   qty: number;
   onAdd: () => void;
   onDec: () => void;
+  motionIndex?: number;
 };
 
-export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
+export function MenuItemCard({ item, qty, onAdd, onDec, motionIndex = 0 }: MenuItemCardProps) {
   const inBill = qty > 0;
 
   return (
     <article
+      data-motion="reveal"
+      data-motion-delay={String((motionIndex % 6) * 40)}
       className={`group relative flex flex-col overflow-hidden rounded-[3px] border bg-[#f4f2ee] transition-all duration-300 ${
         item.unavailable
           ? "border-[#e7e2d7] opacity-70"
@@ -68,7 +71,7 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
           </div>
         )}
         {inBill && !item.unavailable && (
-          <div className="absolute bottom-3 right-3 inline-flex items-center gap-1 rounded-[1px] bg-[#9a6d32] px-2 py-[3px] text-[10px] text-[#f8f7f5]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
+          <div className="khanchi-quantity-pop absolute bottom-3 right-3 inline-flex items-center gap-1 rounded-[1px] bg-[#9a6d32] px-2 py-[3px] text-[10px] text-[#f8f7f5]" style={{ fontFamily: "'IRANSansX:DemiBold'" }}>
             در فاکتور
             <IconCheck size={11} />
           </div>
@@ -111,7 +114,7 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
               <button type="button" onClick={onAdd} aria-label="افزودن" className="grid h-[36px] w-[34px] place-items-center hover:text-[#d8b06a]">
                 <IconPlus size={15} />
               </button>
-              <span className="min-w-[16px] text-center text-[14px]" style={{ fontFamily: "'IRANSansX:Bold'" }}>
+              <span key={qty} className="khanchi-quantity-pop min-w-[16px] text-center text-[14px]" style={{ fontFamily: "'IRANSansX:Bold'" }}>
                 {qty.toLocaleString("fa-IR")}
               </span>
               <button type="button" onClick={onDec} aria-label="کاهش" className="grid h-[36px] w-[34px] place-items-center hover:text-[#d8b06a]">
@@ -122,7 +125,7 @@ export function MenuItemCard({ item, qty, onAdd, onDec }: MenuItemCardProps) {
             <button
               type="button"
               onClick={onAdd}
-              className="grid size-9 shrink-0 place-items-center rounded-[1px] border border-[#10231c] text-[#10231c] transition-colors hover:bg-[#10231c] hover:text-[#f8f7f5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a6d32]"
+              className="grid size-9 shrink-0 place-items-center rounded-[1px] border border-[#10231c] text-[#10231c] transition duration-200 hover:-translate-y-0.5 hover:bg-[#10231c] hover:text-[#f8f7f5] active:scale-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a6d32]"
               aria-label={`افزودن ${item.name} به فاکتور`}
               title="افزودن به فاکتور"
             >

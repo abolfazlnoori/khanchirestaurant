@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { formatPrice } from "./menu-data";
 import {
   IconChevronLeft,
@@ -80,8 +81,8 @@ export function BillContents({
           <ul
             className={`flex flex-col divide-y divide-[#ece7dc] overflow-y-auto ${scrollClass}`}
           >
-            {bill.entries.map(({ item, qty, note }) => (
-              <li key={item.id} className="px-4 py-4">
+            {bill.entries.map(({ item, qty, note }, index) => (
+              <li key={item.id} className="px-4 py-4" data-motion="reveal" data-motion-delay={String(index * 35)}>
                 <div className="flex gap-3">
                   <div className="h-[58px] w-[58px] shrink-0 overflow-hidden rounded-[2px]">
                     <ProductVisual product={item} sizes="58px" />
@@ -140,7 +141,8 @@ export function BillContents({
                           <IconPlus size={13} />
                         </button>
                         <span
-                          className="min-w-[26px] text-center text-[13px]"
+                          key={qty}
+                          className="khanchi-quantity-pop min-w-[26px] text-center text-[13px]"
                           style={{ fontFamily: "'IRANSansX:Bold'" }}
                         >
                           {qty.toLocaleString("fa-IR")}
@@ -243,16 +245,51 @@ export function BillSheet({
   onClose: () => void;
   onGarson: () => void;
 }) {
+  const [closing, setClosing] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+  const closingRef = useRef(false);
+
+  const requestClose = useCallback(() => {
+    if (closingRef.current) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    closingRef.current = true;
+    setClosing(true);
+    closeTimer.current = window.setTimeout(() => {
+      closingRef.current = false;
+      setClosing(false);
+      onClose();
+    }, reduceMotion ? 0 : 220);
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") requestClose();
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open, requestClose]);
+
+  useEffect(
+    () => () => {
+      if (closeTimer.current !== null) window.clearTimeout(closeTimer.current);
+    },
+    [],
+  );
+
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true">
       <div
-        className="absolute inset-0 bg-[#10231c]/45 backdrop-blur-sm"
-        onClick={onClose}
+        className={`absolute inset-0 bg-[#10231c]/45 backdrop-blur-sm ${closing ? "khanchi-sheet-scrim-out" : "khanchi-sheet-scrim-in"}`}
+        onClick={requestClose}
       />
       <div
-        className="absolute inset-x-0 flex flex-col overflow-hidden rounded-t-[18px] border-t border-[#e2ddd2] bg-[#fafafa] shadow-[0_-24px_60px_-24px_rgba(16,35,28,0.6)]"
+        className={`absolute inset-x-0 flex flex-col overflow-hidden rounded-t-[18px] border-t border-[#e2ddd2] bg-[#fafafa] shadow-[0_-24px_60px_-24px_rgba(16,35,28,0.6)] ${closing ? "khanchi-sheet-out" : "khanchi-sheet-in"}`}
         style={{
           bottom: "calc(66px + env(safe-area-inset-bottom))",
           maxHeight:
@@ -262,6 +299,14 @@ export function BillSheet({
         <div className="flex items-center justify-between px-5 pb-1 pt-3">
           <div className="mx-auto h-1 w-12 rounded-full bg-[#d9d2c4]" />
         </div>
+        <button
+          type="button"
+          onClick={requestClose}
+          className="absolute left-4 top-4 z-10 grid size-9 place-items-center rounded-full border border-[#e2ddd2] bg-[#fafafa] text-[#647069] transition duration-200 hover:border-[#9a6d32] hover:text-[#10231c] active:scale-90"
+          aria-label="بستن فاکتور"
+        >
+          <IconClose size={18} />
+        </button>
         <div className="min-h-0 flex-1 overflow-y-auto">
           <BillContents bill={bill} onGarson={onGarson} variant="sheet" />
         </div>
@@ -272,7 +317,7 @@ export function BillSheet({
 
 export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => void }) {
   return (
-    <div className="fixed inset-0 z-[60] overflow-y-auto bg-[#f6f2ec]">
+    <div className="khanchi-modal-in fixed inset-0 z-[60] overflow-y-auto bg-[#f6f2ec]">
       <div className="mx-auto max-w-[720px] px-6 py-10">
         <div className="mb-8 flex items-center justify-between">
           <div className="text-right">

@@ -23,7 +23,7 @@ export function MobileReviewsCarousel() {
   }, [activeIndex]);
 
   return (
-    <div className="hidden max-[900px]:block">
+    <div className="hidden max-[900px]:block" data-motion="reveal" data-motion-delay="70">
       <div
         className="relative mx-auto mt-[26px] min-h-[250px] w-[calc(100%-48px)] overflow-hidden max-[420px]:w-[calc(100%-24px)]"
         aria-roledescription="carousel"

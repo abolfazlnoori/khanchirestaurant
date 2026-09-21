@@ -5,14 +5,16 @@ const starIndexes = [0, 1, 2, 3, 4] as const;
 
 type ReviewCardProps = Review & {
   mobile?: boolean;
+  motionIndex?: number;
 };
 
-export function ReviewCard({ quote, name, occasion, active = false, mobile = false }: ReviewCardProps) {
+export function ReviewCard({ quote, name, occasion, active = false, mobile = false, motionIndex = 0 }: ReviewCardProps) {
   return (
     <article
+      {...(!mobile ? { "data-motion": "reveal", "data-motion-delay": String(motionIndex * 55) } : {})}
       className={`min-h-[240px] flex-col items-center text-center ${
         mobile
-          ? `absolute inset-0 flex min-h-[250px] justify-center border border-line p-[34px_24px_24px] transition-[opacity,transform] duration-400 ease-out ${
+          ? `absolute inset-0 flex min-h-[250px] justify-center border border-line p-[34px_24px_24px] transition-[opacity,transform] duration-300 ease-[var(--motion-ease)] ${
               active
                 ? "z-10 translate-x-0 opacity-100"
                 : "pointer-events-none z-0 translate-x-3 opacity-0"
