@@ -1,3 +1,5 @@
+import { restaurant } from "@/lib/site";
+
 export type FooterLink = {
   label: string;
   href?: string;
@@ -13,25 +15,25 @@ export type FooterInfoItem = {
 export const footerInfoItems: readonly FooterInfoItem[] = [
   {
     title: "موقعیت",
-    lines: [{ label: "سعادت‌آباد، تهران" }],
+    lines: [{ label: restaurant.displayAddress }],
   },
   {
     title: "ساعات فعالیت",
-    lines: [{ label: "همه‌روزه ۱۱:۳۰ تا ۲۴:۰۰" }],
+    lines: [{ label: restaurant.openingHours }],
   },
   {
     title: "تماس",
     lines: [
-      { label: "۰۲۱-۲۲۳۸ ۹۸۷۳", href: "tel:+982122389873" },
-      { label: "۰۹۰۳ ۲۸۰ ۵۱۴۷", href: "tel:+989032805147" },
+      { label: restaurant.displayTelephone, href: `tel:${restaurant.telephone}` },
+      { label: restaurant.displayMobile, href: `tel:${restaurant.mobile}` },
     ],
   },
   {
     title: "اینستاگرام",
     lines: [
       {
-        label: "@khanchi.restaurant",
-        href: "https://instagram.com/khanchi.restaurant",
+        label: restaurant.instagramHandle,
+        href: restaurant.instagram,
         className: "[direction:ltr]",
         external: true,
       },

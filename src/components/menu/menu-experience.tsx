@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { SiteHeader } from "@/components/layout/site-header/site-header";
+import { SkipLink } from "@/components/shared/skip-link";
 import { BillSheet, GarsonView } from "./bill-components";
 import { formatPrice } from "./menu-data";
 import { FeaturedStrip, MenuHero } from "./menu-landing";
@@ -33,16 +34,19 @@ export default function MenuExperience() {
 
   return (
     <div dir="rtl" className="menu-page min-h-screen bg-[#fafafa] text-[#10231c]">
+      <SkipLink />
       <SiteHeader activePage="menu" />
 
-      {view === "home" ? (
-        <>
-          <MenuHero onBrowse={() => goto("menu")} />
-          <FeaturedStrip onBrowse={() => goto("menu")} />
-        </>
-      ) : (
-        <MenuView bill={bill} onGarson={openGarson} />
-      )}
+      <main id="main-content">
+        {view === "home" ? (
+          <>
+            <MenuHero onBrowse={() => goto("menu")} />
+            <FeaturedStrip onBrowse={() => goto("menu")} />
+          </>
+        ) : (
+          <MenuView bill={bill} onGarson={openGarson} />
+        )}
+      </main>
 
       {bill.count > 0 && (
         <button

@@ -79,9 +79,9 @@ export function MenuItemCard({ item, qty, onAdd, onDec, motionIndex = 0 }: MenuI
       </div>
 
       <div className="flex flex-1 flex-col items-end gap-2 px-5 pb-4 pt-5 text-right">
-        <h4 className="text-[19px] text-[#17231c]" style={{ fontFamily: "'Abar High:SemiBold'" }}>
+        <h3 className="text-[19px] text-[#17231c]" style={{ fontFamily: "'Abar High:SemiBold'" }}>
           {item.name}
-        </h4>
+        </h3>
         <p className="min-h-[36px] text-[12px] leading-[1.85] text-[#6e706a]" style={{ fontFamily: "'IRANSansX:Regular'" }}>
           {item.description || "توضیحات تکمیلی به‌زودی درج می‌شود."}
         </p>

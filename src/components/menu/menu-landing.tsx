@@ -51,9 +51,9 @@ export function MenuHero({ onBrowse }: { onBrowse: () => void }) {
 
 export function FeaturedStrip({ onBrowse }: { onBrowse: () => void }) {
   const cards = [
-    { kicker: "STARTERS • SHARE", title: "پیش‌غذا", description: "شروعی آرام با طعم‌های دقیق و گیاهان معطر.", image: menuLandingImages.starters },
-    { kicker: "SIGNATURE • FIRE", title: "غذای اصلی", description: "جایی که مواد ممتاز و تکنیک حرفه‌ای شاهکار می‌آفرینند.", image: menuLandingImages.main },
-    { kicker: "APERITIF • NIGHT", title: "نوشیدنی", description: "مجموعه‌ای سنجیده برای همراهی‌ای دلنشین با طعم‌ها.", image: menuLandingImages.drinks },
+    { kicker: "STARTERS • SHARE", title: "پیش‌غذا", description: "شروعی آرام با طعم‌های دقیق و گیاهان معطر.", image: menuLandingImages.starters, imageAlt: "پیش‌غذای ایرانی رستوران خانچی با سبزیجات تازه" },
+    { kicker: "SIGNATURE • FIRE", title: "غذای اصلی", description: "جایی که مواد ممتاز و تکنیک حرفه‌ای شاهکار می‌آفرینند.", image: menuLandingImages.main, imageAlt: "غذای اصلی گریل‌شده از منوی رستوران خانچی" },
+    { kicker: "APERITIF • NIGHT", title: "نوشیدنی", description: "مجموعه‌ای سنجیده برای همراهی‌ای دلنشین با طعم‌ها.", image: menuLandingImages.drinks, imageAlt: "نوشیدنی زرشک و مرکبات از منوی خانچی" },
   ];
 
   return (
@@ -78,7 +78,7 @@ export function FeaturedStrip({ onBrowse }: { onBrowse: () => void }) {
             <div className="relative h-[210px] overflow-hidden bg-[#e6e2da]">
               <Image
                 src={card.image}
-                alt={card.title}
+                alt={card.imageAlt}
                 fill
                 sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -89,7 +89,21 @@ export function MenuView({
   );
 
   return (
-    <section className="bg-[#fafafa]">
+    <section className="bg-[#fafafa]" aria-labelledby="menu-page-title">
+      <div className="mx-auto max-w-[1440px] px-5 pt-10 text-right lg:px-16 lg:pt-14">
+        <p className="text-[12px] font-semibold text-[#9a6d32]">منوی خانچی</p>
+        <h1
+          id="menu-page-title"
+          className="mt-2 text-[clamp(36px,5vw,58px)] leading-[1.2] text-[#17231c]"
+          style={{ fontFamily: "'Abar High:Bold'" }}
+        >
+          منوی رستوران ایرانی خانچی
+        </h1>
+        <p className="mt-4 max-w-[760px] text-[14px] leading-[2] text-[#647069]">
+          غذاهای اصیل ایرانی، کباب‌های زغالی، خورشت‌ها، پلوها، پیش‌غذاها و
+          دمنوش‌ها را ببینید و فاکتور تخمینی خود را آماده کنید.
+        </p>
+      </div>
       <div className="khanchi-header-enter sticky top-[70px] z-30 border-b border-[#f0ebe1] bg-[#fafafa]/95 backdrop-blur-sm lg:top-[92px]">
         <div className="mx-auto max-w-[1440px] px-5 py-4 lg:px-16">
           <div className="flex flex-col gap-3 lg:flex-row-reverse lg:items-center lg:justify-between">
@@ -98,6 +112,8 @@ export function MenuView({
                 <IconSearch size={17} />
               </span>
               <input
+                type="search"
+                aria-label="جستجو در منوی رستوران خانچی"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="جستجوی غذا…"
@@ -143,19 +159,24 @@ export function MenuView({
               </div>
             ) : (
               visibleSections.map((category, index) => (
-                <div key={category.id} className={index !== 0 ? "mt-16" : ""}>
+                <section
+                  key={category.id}
+                  className={index !== 0 ? "mt-16" : ""}
+                  aria-labelledby={`menu-category-${category.id}`}
+                >
                   <div className="mb-8 flex items-center justify-between gap-4 border-b border-[#ece7dc] pb-5 text-right max-[900px]:mb-10 max-[900px]:pb-7" data-motion="reveal">
                     <div className="flex items-center gap-3">
                       <span className="grid h-[46px] w-[46px] shrink-0 place-items-center rounded-[2px] border border-[#e6ddce] bg-[#f6f2ec] text-[#9a6d32]">
                         {(categoryIcon[category.id] ?? IconMenuBook)({ size: 24 })}
                       </span>
                       <div>
-                        <h3
+                        <h2
+                          id={`menu-category-${category.id}`}
                           className="text-[clamp(26px,3.4vw,40px)] leading-[1.15] text-[#17231c]"
                           style={{ fontFamily: "'Abar High:Bold'" }}
                         >
                           {category.title}
-                        </h3>
+                        </h2>
                         <p
                           className="mt-1 text-[11px] uppercase tracking-[0.2em] text-[#a87b3d]"
                           style={{ fontFamily: "'Cormorant Garamond:SemiBold'" }}
@@ -178,7 +199,7 @@ export function MenuView({
                       />
                     ))}
                   </div>
-                </div>
+                </section>
               ))
             )}
           </div>

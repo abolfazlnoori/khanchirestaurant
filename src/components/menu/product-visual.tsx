@@ -17,7 +17,7 @@ export function ProductVisual({
       <div className={`relative h-full w-full overflow-hidden ${className}`}>
         <Image
           src={product.image}
-          alt={product.name}
+          alt={`${product.name} از منوی رستوران خانچی`}
           fill
           sizes={sizes}
           className="object-cover"
@@ -29,8 +29,6 @@ export function ProductVisual({
   return (
     <div
       className={`relative h-full w-full overflow-hidden bg-[#f6f2ec] ${className}`}
-      role="img"
-      aria-label={`تصویر پیش‌فرض ${product.name}`}
     >
       <Image
         src="/assets/patterns/pattern-aboutus.png"

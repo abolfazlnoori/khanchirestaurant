@@ -1,0 +1,33 @@
+.docker-cache
+.git
+.idea
+.next
+.DS_Store
+node_modules
+tmp
+npm-debug.log*
+*.tsbuildinfo
+*.pem
+.env
+.env.*
+
+Dockerfile
+docker-compose*.yml
+README.md
+menu.txt
+
+# Legacy/source duplicates retained in the repository but unused by the app.
+public/assets/images/03a48d2c3101ea2860354d934189f2d7d07220a2.png
+public/assets/images/36428ca0865f6d128a940052bb0c2023b094b1e7.png
+public/assets/images/54861c1f293404ecfec9c59eb381a4d5a499b870.png
+public/assets/images/57c797f09da450d43f0788f12cf9cc46d8f20dd8.png
+public/assets/images/672843928064b14a1d54aa7c8112e14fda4b4ff2.png
+public/assets/images/7f92d7bae66271ad0e271d050523161bfa5b38de.png
+public/assets/images/Frame 2147225950.png
+public/assets/images/c22893e0d55adaa7e986f6edad3c969293bcbb87.png
+public/assets/images/hero-kebab.png
+public/assets/images/menu-main.png
+public/assets/menu/a4cc6.svg
+public/assets/menu/b4852.png
+public/assets/menu/e75ca.svg
+public/assets/patterns/Persian Girih Pattern — 6×6.png

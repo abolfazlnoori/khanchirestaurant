@@ -18,7 +18,7 @@ function FooterInfoLine({ line }: { line: FooterLink }) {
 
 export function FooterContactGrid() {
   return (
-    <div className="grid grid-cols-4 border-y border-line px-[max(6vw,48px)] py-[30px] max-[900px]:grid-cols-1 max-[900px]:px-6 max-[900px]:py-4">
+    <address className="grid grid-cols-4 border-y border-line px-[max(6vw,48px)] py-[30px] not-italic max-[900px]:grid-cols-1 max-[900px]:px-6 max-[900px]:py-4">
       {footerInfoItems.map((item, index) => (
         <div
           data-motion="reveal"
@@ -32,6 +32,6 @@ export function FooterContactGrid() {
           </div>
         </div>
       ))}
-    </div>
+    </address>
   );
 }

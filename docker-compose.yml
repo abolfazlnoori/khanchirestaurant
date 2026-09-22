@@ -1,0 +1,37 @@
+name: khanchi
+
+services:
+  frontend-pro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+      args:
+        NODE_IMAGE: ${PRO_NODE_IMAGE:-docker.arvancloud.ir/library/node:20-alpine}
+        APK_MIRROR: ${PRO_APK_MIRROR:-https://mirror.arvancloud.ir/alpine}
+        NPM_REGISTRY: ${PRO_NPM_REGISTRY:-https://repo.hmirror.ir/npm}
+        NEXT_PUBLIC_SITE_URL: ${PRO_NEXT_PUBLIC_SITE_URL:-https://khanchirestaurant.com}
+        SITE_ALLOW_INDEXING: ${PRO_SITE_ALLOW_INDEXING:-true}
+        GOOGLE_SITE_VERIFICATION: ${PRO_GOOGLE_SITE_VERIFICATION:-}
+        APP_VERSION: ${PRO_APP_VERSION:-latest}
+      cache_from:
+        - type=local,src=.docker-cache/frontend-pro
+      cache_to:
+        - type=local,dest=.docker-cache/frontend-pro,mode=max
+    image: ${PRO_FRONTEND_IMAGE:-khanchi-frontend}:${PRO_FRONTEND_TAG:-latest}
+    container_name: ${PRO_FRONTEND_CONTAINER_NAME:-khanchi-frontend-pro}
+    ports:
+      - "${PRO_FRONTEND_BIND_ADDRESS:-127.0.0.1}:${PRO_FRONTEND_PUBLISHED_PORT:-3001}:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      APP_VERSION: ${PRO_APP_VERSION:-latest}
+    restart: unless-stopped
+    init: true
+    healthcheck:
+      test: ["CMD-SHELL", "wget --quiet --tries=1 --spider http://127.0.0.1:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
