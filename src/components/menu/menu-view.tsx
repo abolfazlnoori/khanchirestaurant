@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BillContents } from "./bill-components";
 import { categories } from "./menu-data";
 import { categoryIcon, IconMenuBook, IconSearch } from "./menu-icons";
@@ -65,6 +65,38 @@ export function MenuView({
 }) {
   const [active, setActive] = useState("all");
   const [query, setQuery] = useState("");
+  const filtersRef = useRef<HTMLDivElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
+  const hasSearchedRef = useRef(false);
+
+  const scrollToResults = useCallback(() => {
+    window.requestAnimationFrame(() => {
+      const filters = filtersRef.current;
+      const results = resultsRef.current;
+      if (!filters || !results) return;
+
+      const stickyTop = Number.parseFloat(window.getComputedStyle(filters).top) || 0;
+      const top = window.scrollY + results.getBoundingClientRect().top - stickyTop - filters.offsetHeight - 16;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      window.scrollTo({ top: Math.max(0, top), behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  }, []);
+
+  const selectCategory = useCallback((id: string) => {
+    setActive(id);
+    scrollToResults();
+  }, [scrollToResults]);
+
+  useEffect(() => {
+    if (!hasSearchedRef.current) {
+      hasSearchedRef.current = true;
+      return;
+    }
+
+    const timer = window.setTimeout(scrollToResults, 180);
+    return () => window.clearTimeout(timer);
+  }, [query, scrollToResults]);
 
   const visibleSections = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -104,7 +136,7 @@ export function MenuView({
           دمنوش‌ها را ببینید و فاکتور تخمینی خود را آماده کنید.
         </p>
       </div>
-      <div className="khanchi-header-enter sticky top-[70px] z-30 border-b border-[#f0ebe1] bg-[#fafafa]/95 backdrop-blur-sm lg:top-[92px]">
+      <div ref={filtersRef} className="khanchi-header-enter sticky top-[70px] z-30 border-b border-[#f0ebe1] bg-[#fafafa]/95 backdrop-blur-sm min-[901px]:top-[96px]">
         <div className="mx-auto max-w-[1440px] px-5 py-4 lg:px-16">
           <div className="flex flex-col gap-3 lg:flex-row-reverse lg:items-center lg:justify-between">
             <div className="relative w-full lg:max-w-[280px]">
@@ -122,13 +154,13 @@ export function MenuView({
               />
             </div>
             <div className="min-w-0 lg:flex-1">
-              <CategoryRail active={active} onSelect={setActive} />
+              <CategoryRail active={active} onSelect={selectCategory} />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1440px] px-5 pb-28 pt-10 lg:px-16 lg:pb-20 lg:pt-12">
+      <div ref={resultsRef} className="mx-auto max-w-[1440px] px-5 pb-28 pt-10 lg:px-16 lg:pb-20 lg:pt-12">
         <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_368px] lg:items-start lg:gap-10">
           <div>
             {resultCount === 0 ? (
@@ -150,6 +182,7 @@ export function MenuView({
                   onClick={() => {
                     setQuery("");
                     setActive("all");
+                    scrollToResults();
                   }}
                   className="rounded-[1px] border border-[#10231c] px-5 py-2.5 text-[14px] text-[#10231c] transition-colors hover:bg-[#10231c] hover:text-[#f8f7f5]"
                   style={{ fontFamily: "'IRANSansX:DemiBold'" }}
@@ -196,6 +229,7 @@ export function MenuView({
                         onAdd={() => bill.add(item)}
                         onDec={() => bill.dec(item.id)}
                         motionIndex={itemIndex}
+                        imagePriority={index === 0 && itemIndex === 0}
                       />
                     ))}
                   </div>

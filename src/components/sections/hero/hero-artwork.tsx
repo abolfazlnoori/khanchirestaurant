@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/shared/image-with-skeleton";
 
 export function HeroArtwork() {
   return (
@@ -19,12 +19,13 @@ export function HeroArtwork() {
         <br />
         RESTAURANT
       </p>
-      <Image
+      <ImageWithSkeleton
         className="khanchi-hero-plate object-contain"
         src="/assets/images/9b805236df92fb6ed53b77b3728bb5f6fbb6dc1c.png"
         alt="چلوکباب ایرانی با برنج زعفرانی و گوجه کبابی"
         fill
-        priority
+        preload
+        fetchPriority="high"
         sizes="(max-width: 767px) 90vw, 48vw"
       />
     </div>

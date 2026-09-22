@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { formatPrice } from "./menu-data";
 import {
   IconChevronLeft,
-  IconClose,
   IconMenuBook,
   IconMinus,
   IconNote,

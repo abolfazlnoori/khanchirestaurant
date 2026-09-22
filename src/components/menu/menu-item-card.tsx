@@ -16,9 +16,10 @@ type MenuItemCardProps = {
   onAdd: () => void;
   onDec: () => void;
   motionIndex?: number;
+  imagePriority?: boolean;
 };
 
-export function MenuItemCard({ item, qty, onAdd, onDec, motionIndex = 0 }: MenuItemCardProps) {
+export function MenuItemCard({ item, qty, onAdd, onDec, motionIndex = 0, imagePriority = false }: MenuItemCardProps) {
   const inBill = qty > 0;
 
   return (
@@ -34,7 +35,8 @@ export function MenuItemCard({ item, qty, onAdd, onDec, motionIndex = 0 }: MenuI
       <div className="relative h-[200px] overflow-hidden bg-[#e6e2da]">
         <ProductVisual
           product={item}
-          sizes="(max-width: 640px) calc(100vw - 40px), (max-width: 1280px) 50vw, 33vw"
+          eager={imagePriority}
+          sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) calc((100vw - 60px) / 2), (max-width: 1279px) calc((100vw - 468px) / 2), 280px"
           className={`transition-transform duration-700 ${
             item.unavailable ? "grayscale" : "group-hover:scale-[1.015]"
           }`}

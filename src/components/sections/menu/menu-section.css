@@ -17,4 +17,46 @@
       "regular-one"
       "regular-two";
   }
+
+  .menu-grid > .menu-card:nth-child(1),
+  .menu-grid > .menu-card:nth-child(2) {
+    background: var(--forest-deep);
+    color: white;
+  }
+
+  .menu-grid > .menu-card:nth-child(1) h3,
+  .menu-grid > .menu-card:nth-child(1) p,
+  .menu-grid > .menu-card:nth-child(1) a,
+  .menu-grid > .menu-card:nth-child(2) h3,
+  .menu-grid > .menu-card:nth-child(2) p,
+  .menu-grid > .menu-card:nth-child(2) a {
+    color: white;
+  }
+
+  .menu-grid > .menu-card:nth-child(1) a,
+  .menu-grid > .menu-card:nth-child(2) a {
+    border-color: rgb(255 255 255 / 0.2);
+  }
+
+  .menu-grid > .menu-card:nth-child(3) {
+    background: var(--card);
+    color: var(--ink);
+  }
+
+  .menu-grid > .menu-card:nth-child(3) h3 {
+    color: #141a16;
+  }
+
+  .menu-grid > .menu-card:nth-child(3) p {
+    color: #313530;
+  }
+
+  .menu-grid > .menu-card:nth-child(3) p:first-child,
+  .menu-grid > .menu-card:nth-child(3) a {
+    color: #817b72;
+  }
+
+  .menu-grid > .menu-card:nth-child(3) a {
+    border-color: #d9d4cc;
+  }
 }

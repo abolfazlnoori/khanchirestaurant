@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/shared/image-with-skeleton";
 import { IconChevronLeft } from "./menu-icons";
 import { menuLandingImages } from "./menu-assets";
 import { Eyebrow, GirihPattern } from "./menu-primitives";
@@ -76,7 +76,7 @@ export function FeaturedStrip({ onBrowse }: { onBrowse: () => void }) {
             className="group flex flex-col overflow-hidden rounded-[2px] border border-[#eae4d9] bg-[#f0eff0] text-right"
           >
             <div className="relative h-[210px] overflow-hidden bg-[#e6e2da]">
-              <Image
+              <ImageWithSkeleton
                 src={card.image}
                 alt={card.imageAlt}
                 fill

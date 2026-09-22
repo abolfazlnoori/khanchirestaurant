@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { ImageWithSkeleton } from "@/components/shared/image-with-skeleton";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const closeDuration = 180;
@@ -85,7 +85,7 @@ export function ExperiencePreview() {
         className="video-placeholder group mx-auto mt-[92px] aspect-[3.2] w-[min(1248px,calc(100%-64px))] overflow-hidden border border-[#214b34] max-[900px]:mt-[34px] max-[900px]:aspect-[1.66] max-[900px]:w-[calc(100%-48px)] max-[420px]:w-[calc(100%-44px)]"
         data-motion="scale"
       >
-        <Image
+        <ImageWithSkeleton
           className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
           src="/assets/images/Chef image.png"
           alt="سرآشپز خانچی در حال آماده‌سازی غذا"
