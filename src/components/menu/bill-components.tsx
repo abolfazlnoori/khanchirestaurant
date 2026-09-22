@@ -299,14 +299,6 @@ export function BillSheet({
         <div className="flex items-center justify-between px-5 pb-1 pt-3">
           <div className="mx-auto h-1 w-12 rounded-full bg-[#d9d2c4]" />
         </div>
-        <button
-          type="button"
-          onClick={requestClose}
-          className="absolute left-4 top-4 z-10 grid size-9 place-items-center rounded-full border border-[#e2ddd2] bg-[#fafafa] text-[#647069] transition duration-200 hover:border-[#9a6d32] hover:text-[#10231c] active:scale-90"
-          aria-label="بستن فاکتور"
-        >
-          <IconClose size={18} />
-        </button>
         <div className="min-h-0 flex-1 overflow-y-auto">
           <BillContents bill={bill} onGarson={onGarson} variant="sheet" />
         </div>
@@ -318,11 +310,11 @@ export function BillSheet({
 export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => void }) {
   return (
     <div className="khanchi-modal-in fixed inset-0 z-[60] overflow-y-auto bg-[#f6f2ec]">
-      <div className="mx-auto max-w-[720px] px-6 py-10">
-        <div className="mb-8 flex items-center justify-between">
+      <div className="mx-auto max-w-[720px] px-4 pb-[calc(90px+env(safe-area-inset-bottom))] pt-6 sm:px-6 sm:pt-10 min-[901px]:pb-10">
+        <div className="mb-6 flex items-center justify-between gap-4 sm:mb-8">
           <div className="text-right">
             <p
-              className="text-[28px] text-[#10231b]"
+              className="text-[24px] text-[#10231b] sm:text-[28px]"
               style={{ fontFamily: "'Abar High:Bold'" }}
             >
               سفارش من
@@ -337,11 +329,11 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
           <button
             type="button"
             onClick={onClose}
-            className="inline-flex items-center gap-1.5 rounded-[1px] border border-[#d9d2c4] px-4 py-2 text-[14px] text-[#10231c] transition-colors hover:border-[#9a6d32]"
+            className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-[1px] border border-[#d9d2c4] px-3 py-2 text-[14px] text-[#10231c] transition-colors hover:border-[#9a6d32] sm:px-4"
             style={{ fontFamily: "'IRANSansX:Medium'" }}
           >
-            بازگشت
             <IconChevronLeft size={16} className="rotate-180" />
+            بازگشت
           </button>
         </div>
 
@@ -349,13 +341,13 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
           {bill.entries.map(({ item, qty, note }, index) => (
             <div
               key={item.id}
-              className={`flex items-start justify-between gap-4 px-6 py-5 ${
+              className={`flex items-start justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 sm:py-5 ${
                 index !== 0 ? "border-t border-[#ece7dc]" : ""
               }`}
             >
               <div className="flex-1 text-right">
                 <p
-                  className="text-[26px] leading-[1.4] text-[#17231c]"
+                  className="text-[22px] leading-[1.4] text-[#17231c] sm:text-[26px]"
                   style={{ fontFamily: "'Abar High:SemiBold'" }}
                 >
                   {item.name}
@@ -378,7 +370,7 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
                 </p>
               </div>
               <span
-                className="grid h-[52px] min-w-[52px] place-items-center rounded-[2px] bg-[#10231c] text-[26px] text-[#f8f7f5]"
+                className="grid h-12 min-w-12 place-items-center rounded-[2px] bg-[#10231c] text-[24px] text-[#f8f7f5] sm:h-[52px] sm:min-w-[52px] sm:text-[26px]"
                 style={{ fontFamily: "'IRANSansX:Bold'" }}
               >
                 {qty.toLocaleString("fa-IR")}
@@ -387,7 +379,7 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
           ))}
         </div>
 
-        <div className="mt-6 flex items-center justify-between rounded-[2px] bg-[#10231c] px-6 py-5 text-[#f8f7f5]">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-[2px] bg-[#10231c] px-4 py-5 text-[#f8f7f5] sm:px-6">
           <div className="text-right">
             <p
               className="text-[16px]"
@@ -403,7 +395,7 @@ export function GarsonView({ bill, onClose }: { bill: BillApi; onClose: () => vo
             </p>
           </div>
           <span
-            className="text-[30px]"
+            className="text-[24px] sm:text-[30px]"
             style={{ fontFamily: "'IRANSansX:Bold'" }}
           >
             {bill.hasMissingPrices

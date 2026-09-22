@@ -24,7 +24,7 @@ export const restaurant = {
     "رستوران اصیل ایرانی در سعادت‌آباد تهران با منوی غذاهای سنتی، کباب و نوشیدنی.",
   telephone: "+982122389873",
   mobile: "+989032805147",
-  displayTelephone: "۰۲۱-۲۲۳۸ ۹۸۷۳",
+  displayTelephone: "۰۲۱ ۲۲۳۸ ۹۸۷۳",
   displayMobile: "۰۹۰۳ ۲۸۰ ۵۱۴۷",
   address: {
     streetAddress: "سعادت‌آباد",
