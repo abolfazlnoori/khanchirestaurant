@@ -14,7 +14,7 @@
           "description": "۲۵۰ گرم کباب",
           "price": 780000,
           "category": "kebabs",
-          "image": null,
+          "image": "/assets/images/menu/کوبیده.JPG.jpeg",
           "tags": []
         },
         {
@@ -23,7 +23,7 @@
           "description": "۲۸۰ گرم مخلوط گوشت گوساله و گوسفندی و سبزیجات تند",
           "price": 960000,
           "category": "kebabs",
-          "image": null,
+          "image": "/assets/images/menu/کباب آدانا.jpg.jpeg",
           "tags": ["spicy"]
         },
         {
@@ -68,7 +68,7 @@
           "description": "۱۲۰ گرم کوبیده ۱۲۰ گرم جوجه سینه ۱۲۰ گرم چنجه قارچ و گوجه و فلفل با روغن کرمانشاهی",
           "price": 1380000,
           "category": "kebabs",
-          "image": null,
+          "image": "/assets/images/menu/�کاسه کباب.jpeg",
           "tags": []
         },
         {
@@ -104,7 +104,7 @@
           "description": "۱۵۰ گرم راسته گوسفندی ۱۵۰ گرم سینه مرغ",
           "price": 1250000,
           "category": "kebabs",
-          "image": null,
+          "image": "/assets/images/menu/بختیاری.JPG.jpeg",
           "tags": []
         },
         {
@@ -171,11 +171,11 @@
         },
         {
           "id": "zereshk-polo-fried-chicken",
-          "name": "زرشک پلو سس پز",
+          "name": "زرشک پلو مرغ سس پز",
           "description": "۴۰۰ گرم برنج و ۳۰۰ گرم ران مرغ",
           "price": 795000,
           "category": "rice-and-stews",
-          "image": null,
+          "image": "/assets/images/menu/مرغ.jpg.jpeg",
           "tags": []
         },
         {
@@ -201,7 +201,7 @@
           "description": "۳۵۰ گرم برنج ایرانی",
           "price": 210000,
           "category": "rice",
-          "image": null,
+          "image": "/assets/images/menu/کته کره زعفرانی.JPG.jpeg",
           "tags": []
         },
         {
@@ -210,7 +210,7 @@
           "description": "۴۰۰ گرم باقالی و شوید",
           "price": 340000,
           "category": "rice",
-          "image": null,
+          "image": "/assets/images/menu/باقالی پلو.JPG.jpeg",
           "tags": []
         },
         {
@@ -219,16 +219,16 @@
           "description": "۴۰۰ گرم برنج با زرشک و زعفران",
           "price": 340000,
           "category": "rice",
-          "image": null,
+          "image": "/assets/images/menu/زرشک پلو.JPG.jpeg",
           "tags": []
         },
         {
           "id": "tahchin-polo",
           "name": "سماق پلو",
-          "description": "۳۸۰ گرم؛ شامل ته‌چین، گوجه و خلال",
+          "description": "۳۸۰ گرم سماق پلو",
           "price": 340000,
           "category": "rice",
-          "image": null,
+          "image": "/assets/images/menu/سماق پلو.JPG.jpeg",
           "tags": []
         }
       ]
@@ -245,7 +245,7 @@
           "description": "۱۸۰ گرم گوشت، ۲۰۰ گرم دنبه و مخلفات",
           "price": 860000,
           "category": "traditional",
-          "image": null,
+          "image": "/assets/images/menu/دیزی.JPG.jpeg",
           "tags": []
         },
         {
@@ -254,7 +254,7 @@
           "description": "۳۰۰ گرم؛ مخلوط گوشت، لپه، سبزی‌ها و ادویه مخصوص",
           "price": 580000,
           "category": "traditional",
-          "image": null,
+          "image": "/assets/images/menu/کوفته.JPG.jpeg",
           "tags": []
         }
       ]
@@ -271,7 +271,7 @@
           "description": "۲۵۰ گرم خورشت و ۸۰ گرم گوشت",
           "price": 445000,
           "category": "stews-without-rice",
-          "image": null,
+          "image": "/assets/images/menu/قیمه.JPG.jpeg",
           "tags": []
         },
         {
@@ -280,7 +280,7 @@
           "description": "۲۵۰ گرم خورشت و ۸۰ گرم گوشت",
           "price": 415000,
           "category": "stews-without-rice",
-          "image": null,
+          "image": "/assets/images/menu/قورمه سبزی.jpg.jpeg",
           "tags": []
         },
         {
@@ -298,7 +298,7 @@
           "description": "۲۵۰ گرم خورشت و ۸۰ گرم فیله مرغ",
           "price": 610000,
           "category": "stews-without-rice",
-          "image": null,
+          "image": "/assets/images/menu/فسنجون.JPG.jpeg",
           "tags": []
         },
         {
@@ -333,7 +333,7 @@
           "description": "۵۰۰ گرم",
           "price": 260000,
           "category": "starters",
-          "image": null,
+          "image": "/assets/images/menu/�سوپ.jpeg",
           "tags": []
         },
         {
@@ -342,7 +342,7 @@
           "description": "۲۵۰ گرم",
           "price": 350000,
           "category": "starters",
-          "image": null,
+          "image": "/assets/images/menu/میرزاقاسمی.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -351,7 +351,7 @@
           "description": "۲۵۰ گرم",
           "price": 400000,
           "category": "starters",
-          "image": null,
+          "image": "/assets/images/menu/کشک بادمجون.JPG.jpeg",
           "tags": ["vegetarian"]
         }
       ]
@@ -368,7 +368,7 @@
           "description": "کاهو، خیار، کلم، گوجه، زیتون، ذرت و هویج؛ با سس مخصوص",
           "price": 180000,
           "category": "salads",
-          "image": null,
+          "image": "/assets/images/menu/سالاد.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -394,7 +394,7 @@
           "description": "۲۳۰ گرم",
           "price": 120000,
           "category": "condiments",
-          "image": null,
+          "image": "/assets/images/menu/انواع ماست.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -403,7 +403,7 @@
           "description": "۱۷۰ گرم",
           "price": 120000,
           "category": "condiments",
-          "image": null,
+          "image": "/assets/images/menu/انواع ماست.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -412,7 +412,7 @@
           "description": "۲۵۰ گرم",
           "price": 160000,
           "category": "condiments",
-          "image": null,
+          "image": "/assets/images/menu/انواع ماست.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -421,7 +421,7 @@
           "description": "۱۷۰ گرم",
           "price": 160000,
           "category": "condiments",
-          "image": null,
+          "image": "/assets/images/menu/انواع ماست.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -430,7 +430,7 @@
           "description": "۱۷۰ گرم",
           "price": 170000,
           "category": "condiments",
-          "image": null,
+          "image": "/assets/images/menu/انواع ماست.JPG.jpeg",
           "tags": ["vegetarian"]
         },
         {
@@ -483,7 +483,7 @@
           "description": "نبات، رنگینک، گل محمدی و هل",
           "price": 360000,
           "category": "tea-and-herbal",
-          "image": null,
+          "image": "/assets/images/menu/چایی.JPG.jpeg",
           "tags": []
         },
         {
@@ -492,7 +492,7 @@
           "description": "نبات، گل محمدی و هل",
           "price": 190000,
           "category": "tea-and-herbal",
-          "image": null,
+          "image": "/assets/images/menu/چایی.JPG.jpeg",
           "tags": []
         },
         {
@@ -501,7 +501,7 @@
           "description": "",
           "price": 490000,
           "category": "tea-and-herbal",
-          "image": null,
+          "image": "/assets/images/menu/چایی.JPG.jpeg",
           "tags": []
         },
         {
@@ -510,7 +510,7 @@
           "description": "",
           "price": 670000,
           "category": "tea-and-herbal",
-          "image": null,
+          "image": "/assets/images/menu/چایی.JPG.jpeg",
           "tags": []
         },
         {
