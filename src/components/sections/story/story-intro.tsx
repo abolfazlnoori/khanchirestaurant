@@ -1,5 +1,6 @@
 import { ImageWithSkeleton } from "@/components/shared/image-with-skeleton";
 import { SectionLabel } from "@/components/shared/section-label";
+import restaurantInterior from "../../../../public/assets/images/restaurant-interior.png";
 
 export function StoryIntro() {
   return (
@@ -14,7 +15,7 @@ export function StoryIntro() {
         <strong className="mt-[22px] block text-[15px] font-medium text-gold max-[900px]:mt-4 max-[900px]:text-xs">اصالت در طعم، ظرافت در میزبانی</strong>
       </div>
       <div className="relative aspect-[0.78] w-64 rounded-t-[128px] border border-gold max-[900px]:col-start-2 max-[900px]:w-[min(170px,100%)] max-[900px]:justify-self-center" data-motion="scale" data-motion-delay="120">
-        <ImageWithSkeleton className="rounded-t-[128px] object-cover pt-2.5 pr-2.5" skeletonClassName="rounded-t-[128px]" src="/assets/images/restaurant-interior.png" alt="فضای داخلی رستوران خانچی" fill sizes="(max-width: 767px) 170px, 256px" />
+        <ImageWithSkeleton className="rounded-t-[128px] object-cover pt-2.5 pr-2.5" skeletonClassName="rounded-t-[128px]" src={restaurantInterior} alt="فضای داخلی رستوران خانچی" fill quality={90} sizes="(max-width: 900px) 170px, 256px" />
       </div>
     </div>
   );

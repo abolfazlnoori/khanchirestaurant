@@ -9,8 +9,8 @@ function FooterInfoLine({ line }: { line: FooterLink }) {
     <a
       className={`block text-sm transition-colors duration-200 hover:text-gold max-[900px]:leading-[2]${line.className ? ` ${line.className}` : ""}`}
       href={line.href}
-      style={{direction:"ltr"}}
-      {...(line.external ? { rel: "noreferrer", target: "_blank", lang: "en" } : {})}
+      style={line.href.startsWith("tel:") ? { direction: "ltr" } : undefined}
+      {...(line.external ? { rel: "noreferrer", target: "_blank" } : {})}
     >
       {line.label}
     </a>

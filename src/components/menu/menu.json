@@ -3,6 +3,263 @@
   "priceUnit": 1,
   "categories": [
     {
+      "id": "kebabs",
+      "title": "کباب‌ها",
+      "kicker": "CHARCOAL GRILL",
+      "note": "کباب‌های زغالی و ترکیبی",
+      "products": [
+        {
+          "id": "loghmeh-kebab",
+          "name": "لقمه",
+          "description": "۲۵۰ گرم کباب",
+          "price": 780000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "anana-kebab",
+          "name": "آدانا کباب",
+          "description": "۲۸۰ گرم مخلوط گوشت گوساله و گوسفندی و سبزیجات تند",
+          "price": 960000,
+          "category": "kebabs",
+          "image": null,
+          "tags": ["spicy"]
+        },
+        {
+          "id": "saffron-chicken-kebab",
+          "name": "جوجه کباب سینه زعفرانی ۳۰۰ گرم",
+          "description": "۳۰۰ گرم ران",
+          "price": 870000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "saffron-chicken-kebab-2",
+          "name": "جوجه ران زعفرانی ۳۰۰ گرم",
+          "description": "۳۰۰ گرم ران",
+          "price": 870000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "sour-chicken-kebab",
+          "name": "جوجه ترش",
+          "description": "۳۰۰ گرم؛ ادویه مخصوص، انار و گردو",
+          "price": 1040000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "lamb-barg",
+          "name": "برگ گوسفندی",
+          "description": "۳۰۰ گرم",
+          "price": 1780000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "kaseh-kebab",
+          "name": "کاسه‌کباب",
+          "description": "۱۲۰ گرم کوبیده ۱۲۰ گرم جوجه سینه ۱۲۰ گرم چنجه قارچ و گوجه و فلفل با روغن کرمانشاهی",
+          "price": 1380000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "special-vaziri",
+          "name": "وزیری سینه",
+          "description": "جوجه سینه ۲۰۰ گرم. کوبیده ۱۴۰ گرم",
+          "price": 910000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "vaziri-thigh-kebab",
+          "name": "کباب وزیری ران",
+          "description": "۲۰۰ گرم جوجه ران ۱۴۰ گرم کوبیده",
+          "price": 1030000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "soltani-kebab",
+          "name": "کباب سلطانی",
+          "description": "۳۰۰ گرم برگ گوسفندی و ۲۵۰ گرم کوبیده",
+          "price": 2450000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "bakhtiari-kebab",
+          "name": "کباب بختیاری",
+          "description": "۱۵۰ گرم راسته گوسفندی ۱۵۰ گرم سینه مرغ",
+          "price": 1250000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "curry-kebab",
+          "name": "کباب کاردی",
+          "description": "۳۲۰ گرم مخلوط گوساله و گوسفندی",
+          "price": 1050000,
+          "category": "kebabs",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "chef-platter",
+          "name": "سینی سرآشپز (۴ تا ۶ نفره)",
+          "description": "کباب کاری، جوجه سیخی، کباب برگ، شیشلیک، نارنج، سیرترشی، سبزیجات، ۴ پرس برنج، ۲ سالاد فصل، ۲ ماست موسیر و ۲ نوشابه",
+          "price": 6800000,
+          "category": "kebabs",
+          "image": null,
+          "tags": ["sharing"]
+        }
+      ]
+    },
+    {
+      "id": "rice-and-stews",
+      "title": "چلوخورشت و غذاهای همراه برنج",
+      "kicker": "RICE & STEW",
+      "note": "خورشت‌های ایرانی همراه برنج",
+      "products": [
+        {
+          "id": "ghormeh-sabzi-with-rice",
+          "name": "چلو خورشت قرمه سبزی",
+          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
+          "price": 645000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "gheimeh-with-rice",
+          "name": "چلو خورشت قیمه بادمجان",
+          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
+          "price": 635000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "fesenjan-with-rice",
+          "name": "چلو خورشت فسنجان",
+          "description": "۳۵۰ گرم برنج و ۸۰ گرم فیله مرغ",
+          "price": 730000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "gheimeh-nesar",
+          "name": "چلو خورشت قیمه نثار",
+          "description": "۱۰۰ گرم نثار ۱۵۰ گوشت مغزران گوساله ۳۵۰ گرم برنج",
+          "price": 1280000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "zereshk-polo-fried-chicken",
+          "name": "زرشک پلو سس پز",
+          "description": "۴۰۰ گرم برنج و ۳۰۰ گرم ران مرغ",
+          "price": 795000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "baghali-polo-mahicheh",
+          "name": "باقالی‌پلو با ماهیچه",
+          "description": "۴۵۰ گرم ماهیچه و ۲۸۰ گرم باقالی‌پلو",
+          "price": 2050000,
+          "category": "rice-and-stews",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "title": "پلوها",
+      "kicker": "PERSIAN RICE",
+      "note": "برنج ایرانی و عطر زعفران",
+      "products": [
+        {
+          "id": "chelo-kareh",
+          "name": "چلو کره",
+          "description": "۳۵۰ گرم برنج ایرانی",
+          "price": 210000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "baghali-polo",
+          "name": "باقالی‌پلو",
+          "description": "۴۰۰ گرم باقالی و شوید",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "zereshk-polo",
+          "name": "زرشک‌پلو",
+          "description": "۴۰۰ گرم برنج با زرشک و زعفران",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "tahchin-polo",
+          "name": "سماق پلو",
+          "description": "۳۸۰ گرم؛ شامل ته‌چین، گوجه و خلال",
+          "price": 340000,
+          "category": "rice",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "traditional",
+      "title": "غذاهای سنتی",
+      "kicker": "TRADITIONAL",
+      "note": "دستورهای ماندگار ایرانی",
+      "products": [
+        {
+          "id": "dizi-haji",
+          "name": "دیزی مخصوص خانچی",
+          "description": "۱۸۰ گرم گوشت، ۲۰۰ گرم دنبه و مخلفات",
+          "price": 860000,
+          "category": "traditional",
+          "image": null,
+          "tags": []
+        },
+        {
+          "id": "koofteh-tabrizi",
+          "name": "کوفته تبریزی",
+          "description": "۳۰۰ گرم؛ مخلوط گوشت، لپه، سبزی‌ها و ادویه مخصوص",
+          "price": 580000,
+          "category": "traditional",
+          "image": null,
+          "tags": []
+        }
+      ]
+    },
+    {
       "id": "stews-without-rice",
       "title": "خورشت بدون پلو",
       "kicker": "PERSIAN STEWS",
@@ -45,15 +302,6 @@
           "tags": []
         },
         {
-          "id": "koofteh-tabrizi-stew",
-          "name": "خورشت کوفته تبریزی",
-          "description": "۲۰۰ گرم کوفته گوسفندی",
-          "price": 450000,
-          "category": "stews-without-rice",
-          "image": null,
-          "tags": []
-        },
-        {
           "id": "chicken-khorak",
           "name": "خوراک مرغ",
           "description": "۴۵۰ گرم مرغ",
@@ -74,310 +322,6 @@
       ]
     },
     {
-      "id": "rice",
-      "title": "پلوها",
-      "kicker": "PERSIAN RICE",
-      "note": "برنج ایرانی و عطر زعفران",
-      "products": [
-        {
-          "id": "chelo-kareh",
-          "name": "چلو کره",
-          "description": "۳۵۰ گرم برنج ایرانی",
-          "price": 210000,
-          "category": "rice",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "baghali-polo",
-          "name": "باقالی‌پلو",
-          "description": "۴۰۰ گرم باقالی و شوید",
-          "price": 340000,
-          "category": "rice",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "zereshk-polo",
-          "name": "زرشک‌پلو",
-          "description": "۴۰۰ گرم برنج با زرشک و زعفران",
-          "price": 340000,
-          "category": "rice",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "tahchin-polo",
-          "name": "ته‌چین پلو",
-          "description": "۳۸۰ گرم؛ شامل ته‌چین، گوجه و خلال",
-          "price": 340000,
-          "category": "rice",
-          "image": null,
-          "tags": []
-        }
-      ]
-    },
-    {
-      "id": "rice-and-stews",
-      "title": "چلوخورشت و غذاهای همراه برنج",
-      "kicker": "RICE & STEW",
-      "note": "خورشت‌های ایرانی همراه برنج",
-      "products": [
-        {
-          "id": "ghormeh-sabzi-with-rice",
-          "name": "قورمه‌سبزی با برنج",
-          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
-          "price": 645000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "gheimeh-with-rice",
-          "name": "قیمه سیب‌زمینی (بادمجان) با برنج",
-          "description": "۲۵۰ گرم برنج و ۸۰ گرم گوشت",
-          "price": 635000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "fesenjan-with-rice",
-          "name": "فسنجان با برنج",
-          "description": "۲۵۰ گرم برنج و ۸۰ گرم فیله مرغ",
-          "price": 730000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "gheimeh-nesar",
-          "name": "قیمه‌نثار",
-          "description": "۱۵۰ گرم گوشت و ۲۲۰ گرم نثار",
-          "price": 1280000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "zereshk-polo-fried-chicken",
-          "name": "زرشک‌پلو با ران مرغ سرخ‌شده",
-          "description": "۴۰۰ گرم برنج و ۳۰۰ گرم ران مرغ",
-          "price": 795000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "baghali-polo-mahicheh",
-          "name": "باقالی‌پلو با ماهیچه",
-          "description": "۴۵۰ گرم ماهیچه و ۲۸۰ گرم باقالی‌پلو",
-          "price": 2050000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "chelo-koofteh-tabrizi",
-          "name": "چلوخورشت کوفته تبریزی",
-          "description": "۲۰۰ گرم گوشت گوسفندی",
-          "price": 1350000,
-          "category": "rice-and-stews",
-          "image": null,
-          "tags": []
-        }
-      ]
-    },
-    {
-      "id": "traditional",
-      "title": "غذاهای سنتی",
-      "kicker": "TRADITIONAL",
-      "note": "دستورهای ماندگار ایرانی",
-      "products": [
-        {
-          "id": "dizi-haji",
-          "name": "دیزی حاجی",
-          "description": "۱۸۰ گرم گوشت، ۲۰۰ گرم دنبه و مخلفات",
-          "price": 860000,
-          "category": "traditional",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "koofteh-tabrizi",
-          "name": "کوفته تبریزی",
-          "description": "۳۰۰ گرم؛ مخلوط گوشت، لپه، سبزی‌ها و ادویه مخصوص",
-          "price": 580000,
-          "category": "traditional",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "halim-bademjan",
-          "name": "حلیم بادمجان",
-          "description": "۲۵۰ گرم گوشت چرخ‌کرده، سبزیجات و حبوبات",
-          "price": 420000,
-          "category": "traditional",
-          "image": null,
-          "tags": []
-        }
-      ]
-    },
-    {
-      "id": "kebabs",
-      "title": "کباب‌ها",
-      "kicker": "CHARCOAL GRILL",
-      "note": "کباب‌های زغالی و ترکیبی",
-      "products": [
-        {
-          "id": "khatoon-kebab",
-          "name": "خاتون",
-          "description": "۹۰۰ گرم برنج و ۳۰۰ گرم راسته گوسفندی",
-          "price": 1650000,
-          "category": "kebabs",
-          "image": null,
-          "tags": [],
-          "needsReview": true
-        },
-        {
-          "id": "loghmeh-kebab",
-          "name": "لقمه",
-          "description": "۲۵۰ گرم کباب",
-          "price": 780000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "rangin-kaman-kebab",
-          "name": "رنگین‌کمان",
-          "description": "۵۰۰ گرم",
-          "price": 1780000,
-          "category": "kebabs",
-          "image": null,
-          "tags": [],
-          "needsReview": true
-        },
-        {
-          "id": "anana-kebab",
-          "name": "آنانا کباب",
-          "description": "۷۵۰ گرم مخلوط گوشت گوساله و گوسفندی؛ تند",
-          "price": 960000,
-          "category": "kebabs",
-          "image": null,
-          "tags": ["spicy"]
-        },
-        {
-          "id": "saffron-chicken-kebab",
-          "name": "جوجه‌کباب زعفرانی",
-          "description": "۲۰۰ گرم ران",
-          "price": 870000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "khorshid-saffron",
-          "name": "خورشید زعفرانی",
-          "description": "۳۰۰ گرم",
-          "price": 810000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "sour-chicken-kebab",
-          "name": "جوجه ترش",
-          "description": "۳۰۰ گرم؛ ادویه مخصوص، انار و گردو",
-          "price": 1040000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "lamb-barg",
-          "name": "برگ گوسفندی",
-          "description": "۳۰۰ گرم",
-          "price": 1780000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "kaseh-kebab",
-          "name": "کاسه‌کباب",
-          "description": "۲۰۰ گرم کوبیده، ۲۰۰ گرم جوجه و ۱۰۰ گرم چنجه",
-          "price": 1380000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "special-vaziri",
-          "name": "وزیری ویژه",
-          "description": "۲۰۰ گرم جوجه و ۱۴۰ گرم کوبیده",
-          "price": 910000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "vaziri-thigh-kebab",
-          "name": "کباب وزیری ران",
-          "description": "۳۰۰ گرم جوجه و ۱۴۰ گرم کوبیده",
-          "price": 1030000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "soltani-kebab",
-          "name": "کباب سلطانی",
-          "description": "۳۰۰ گرم برگ گوسفندی و ۱۵۰ گرم کوبیده",
-          "price": 2450000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "bakhtiari-kebab",
-          "name": "کباب بختیاری",
-          "description": "۲۵۰ گرم گوشت گوسفندی و ۱۵۰ گرم جوجه زعفرانی",
-          "price": 1250000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "curry-kebab",
-          "name": "کباب کاری",
-          "description": "۳۰۰ گرم",
-          "price": 1050000,
-          "category": "kebabs",
-          "image": null,
-          "tags": []
-        },
-        {
-          "id": "chef-platter",
-          "name": "سینی سرآشپز (۴ تا ۶ نفره)",
-          "description": "کباب کاری، جوجه سیخی، کباب برگ، شیشلیک، نارنج، سیرترشی، سبزیجات، ۴ پرس برنج، ۲ سالاد فصل، ۲ ماست موسیر و ۲ نوشابه",
-          "price": 6800000,
-          "category": "kebabs",
-          "image": null,
-          "tags": ["sharing"]
-        },
-        {
-          "id": "economic-platter",
-          "name": "سینی اقتصادی (۴ تا ۶ نفره)",
-          "description": "۲ سیخ کوبیده ۱۴۰ گرمی، ۲ عدد جوجه ۲۰۰ گرمی، ۴ عدد برنج، ۲ ماست چکیده و گوجه",
-          "price": null,
-          "category": "kebabs",
-          "image": null,
-          "tags": ["sharing"]
-        }
-      ]
-    },
-    {
       "id": "starters",
       "title": "پیش‌غذاها",
       "kicker": "STARTERS",
@@ -385,9 +329,9 @@
       "products": [
         {
           "id": "barley-mushroom-soup",
-          "name": "سوپ جو با قارچ و شیر",
+          "name": "سوپ جو با قارچ و مرغ",
           "description": "۵۰۰ گرم",
-          "price": 340000,
+          "price": 260000,
           "category": "starters",
           "image": null,
           "tags": []
@@ -536,7 +480,7 @@
         {
           "id": "tea-service-two",
           "name": "سرویس چای دو نفره",
-          "description": "نبات، گل محمدی و هل",
+          "description": "نبات، رنگینک، گل محمدی و هل",
           "price": 360000,
           "category": "tea-and-herbal",
           "image": null,

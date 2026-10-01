@@ -7,8 +7,8 @@ export function HeroContent() {
     <div className="relative z-[2] w-[min(610px,84%)] justify-self-center py-[52px] max-[900px]:w-[calc(100%-40px)] max-[900px]:p-0 max-[900px]:text-right max-[420px]:w-[calc(100%-28px)]">
       <div className="khanchi-hero-label"><SectionLabel>روایت معاصر از مهمان‌نوازی ایرانی</SectionLabel></div>
       <h1 className="khanchi-hero-title m-0 text-[clamp(54px,5.1vw,84px)] leading-[1.2] font-extrabold tracking-[-0.035em] text-ink max-[900px]:text-[clamp(34px,9.4vw,42px)] max-[900px]:leading-[1.22]" id="hero-title">
-        <span className="max-[900px]:hidden">طعم اصیل،<br />با امضای خانچی</span>
-        <span className="hidden max-[900px]:inline">طعم اصیل ایران، در<br />قلب امروز</span>
+        <span className="max-[900px]:hidden">جایی که دوباره <br/> انتخابش میکنی</span>
+        <span className="hidden max-[900px]:inline">جایی که دوباره <br/> انتخابش میکنی</span>
       </h1>
       <p className="khanchi-hero-copy mt-7 max-w-150 text-[17px] font-semibold text-[#62655f] max-[900px]:hidden">از عطر زعفران تا گرمای یک سفره ایرانی؛ تجربه‌ای آرام، دقیق و به‌یادماندنی در قلب سعادت‌آباد.</p>
       <div className="khanchi-hero-actions mt-[34px] flex items-center gap-3 max-[900px]:mt-3 max-[900px]:w-full max-[900px]:max-w-[360px]">

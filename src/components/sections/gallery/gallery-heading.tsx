@@ -11,7 +11,7 @@ export function GalleryHeading() {
       </div>
       <div className="[direction:rtl] [&>p:first-child]:max-[900px]:justify-start" data-motion="reveal" data-motion-delay="60">
         <SectionLabel>لحظه‌های خانچی</SectionLabel>
-        <h2 className="m-0 text-[clamp(40px,3.6vw,52px)] leading-[1.2] font-extrabold tracking-[-0.035em] whitespace-nowrap text-ink max-[900px]:text-[clamp(28px,7.5vw,38px)] max-[900px]:whitespace-normal max-[420px]:text-[28px]" id="gallery-title">جزئیاتی که اشتها را بیدار<br />می‌کنند</h2>
+        <h2 className="m-0 text-[clamp(40px,3.6vw,52px)] leading-[1.2] font-extrabold tracking-[-0.035em] whitespace-nowrap text-ink max-[900px]:text-[clamp(28px,7.5vw,38px)] max-[900px]:whitespace-normal max-[420px]:text-[28px]" id="gallery-title">جزئیاتی که اشتها را بیدار<br />می‌کند</h2>
       </div>
     </div>
   );
